@@ -1,0 +1,38 @@
+:root {
+  --c1: #212934;
+  --c2: #F5F5F5;
+  --c3: #59AB6E;
+  --c4: #C6C031;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.header {
+  font-size: 11px;
+  background-color: var(--c1);
+  color: var(--c2);
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__items {
+  display: flex;
+  justify-content: space-between;
+}
+.header__items-contacts {
+  display: flex;
+}
+.header__items-contacts div {
+  margin: 0 10px;
+}
+
+/*# sourceMappingURL=template_styles.css.map */
