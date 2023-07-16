@@ -15,7 +15,7 @@ $APPLICATION->SetTitle("Каталог");
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
-		"BASKET_URL" => "/personal/basket.php",
+		"BASKET_URL" => "/personal/cart/",
 		"BIG_DATA_RCM_TYPE" => "personal",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
@@ -140,6 +140,7 @@ $APPLICATION->SetTitle("Каталог");
 		"PAGE_ELEMENT_COUNT" => "30",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
+			0 => "BASE",
 		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",

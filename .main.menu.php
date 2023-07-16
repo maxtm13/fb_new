@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Главная", 
-		"/glavnaya/", 
+		"/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -38,6 +38,13 @@ $aMenuLinks = Array(
 	Array(
 		"Новости", 
 		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Персональный раздел", 
+		"/personal/", 
 		Array(), 
 		Array(), 
 		"" 
