@@ -73,6 +73,6 @@ $APPLICATION->IncludeComponent(
     false
 );
 ?>
-
+<div class="box"></div>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
