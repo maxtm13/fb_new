@@ -24,7 +24,7 @@ $CurUri = $APPLICATION->GetCurUri();
     CJSCore::Init(array("jquery3"));
     Asset::getInstance()->addJs('https://kit.fontawesome.com/f8a5dcd61e.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/fancy/jquery.fancybox.min.js');
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/myscripts.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/myscripts.js');
     // JS
     // HEADERS
     $APPLICATION->ShowHead();

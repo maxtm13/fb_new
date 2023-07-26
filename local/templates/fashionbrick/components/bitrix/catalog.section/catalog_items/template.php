@@ -150,7 +150,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 		<?
 	}
 	//endregion
-	?>
+	?>111
 		<div class="mb-4 catalog-section" data-entity="<?=$containerName?>">
 			<!-- items-container -->
 			<?
