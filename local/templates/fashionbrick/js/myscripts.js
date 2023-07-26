@@ -1,3 +1,4 @@
+
 $().fancybox({
     selector: '[data-fancybox="images"]',
     thumbs: {
