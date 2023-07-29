@@ -17,6 +17,7 @@ use Bitrix\Catalog\ProductTable;
 
 $this->setFrameMode(true);
 
+
 $templateLibrary = array('popup', 'fx', 'ui.fonts.opensans');
 $currencyList = '';
 
@@ -373,6 +374,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 													'VALUES_COUNT' => $skuProperty['VALUES_COUNT']
 												);
 												?>
+
 												<div data-entity="sku-line-block" class="mb-3">
 													<div class="product-item-scu-container-title"><?=htmlspecialcharsEx($skuProperty['NAME'])?></div>
 													<div class="product-item-scu-container">
@@ -387,12 +389,22 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 																		if ($skuProperty['SHOW_MODE'] === 'PICT')
 																		{
 																			?>
-																			<li class="product-item-scu-item-color-container" title="<?=$value['NAME']?>"
+<!--																			<li class="product-item-scu-item-color-container" title="--><?//=$value['NAME']?><!--"-->
+<!--																				data-treevalue="--><?//=$propertyId?><!--_--><?//=$value['ID']?><!--"-->
+<!--																				data-onevalue="--><?//=$value['ID']?><!--">-->
+<!--																				<div class="product-item-scu-item-color-block">-->
+<!--																					<div class="product-item-scu-item-color" title="--><?//=$value['NAME']?><!--"-->
+<!--<!--																						style="background-image: url('--><?////=$value['PICT']['SRC']?><!--');">-->
+<!--                                                                                    --><?//=$value['NAME']?>
+<!--																					</div>-->
+<!--																				</div>-->
+																			<li class="product-item-scu-item-text-container" title="<?=$value['NAME']?>"
 																				data-treevalue="<?=$propertyId?>_<?=$value['ID']?>"
 																				data-onevalue="<?=$value['ID']?>">
-																				<div class="product-item-scu-item-color-block">
-																					<div class="product-item-scu-item-color" title="<?=$value['NAME']?>"
-																						style="background-image: url('<?=$value['PICT']['SRC']?>');">
+																				<div class="product-item-scu-item-text-block">
+																					<div class="product-item-scu-item-text" title="<?=$value['NAME']?>"
+<!--																						style="background-image: url('--><?//=$value['PICT']['SRC']?>');">
+                                                                                    <?=$value['NAME']?>
 																					</div>
 																				</div>
 																			</li>
@@ -1365,10 +1377,11 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 										?>
 										<div class="product-item-selected-scu product-item-selected-scu-color selected"
 											title="<?=$value['NAME']?>"
-											style="background-image: url('<?=$value['PICT']['SRC']?>'); display: none;"
+<!--											style="background-image: url('--><?//=$value['PICT']['SRC']?>/*'); display: none;"*/
 											data-sku-line="<?=$i?>"
 											data-treevalue="<?=$propertyId?>_<?=$value['ID']?>"
 											data-onevalue="<?=$value['ID']?>">
+                                            <?=$value['NAME']?>
 										</div>
 										<?php
 									}

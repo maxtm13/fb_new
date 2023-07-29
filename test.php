@@ -19,8 +19,9 @@ $APPLICATION->SetTitle("");
 			1 => "",
 		),
 		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "ATT_BTN_NAME",
+			1 => "ATT_PREF",
+			2 => "",
 		),
 		"CHECK_DATES" => "Y",
 		"DETAIL_URL" => "",
@@ -65,4 +66,9 @@ $APPLICATION->SetTitle("");
 		"MESSAGE_404" => ""
 	),
 	false
-);?><br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+);?>
+
+
+
+
+    <br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
