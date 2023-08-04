@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/templates/fasionbrick/components/bitrix/sale.basket.basket/cart/style.css" => "168950943044467","/local/templates/fasionbrick/components/bitrix/sale.basket.basket/cart/themes/blue/style.css" => "1689509430592",]; ?>

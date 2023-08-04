@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/templates/fasionbrick/js/fancy/jquery.fancybox.min.css" => "168509566012500",]; ?>

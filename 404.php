@@ -1,0 +1,1 @@
+<a class="main__page" href="/">На главную</a>

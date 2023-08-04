@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/templates/fashionbrick/components/bitrix/catalog.section.list/main_page_sections/style.css" => "16901976635941","/local/templates/fashionbrick/components/bitrix/catalog.section/catalog_items/style.css" => "169064863640","/local/templates/fashionbrick/components/bitrix/catalog.item/card/style.css" => "169064824323499",]; ?>

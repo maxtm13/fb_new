@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/wizards/bitrix/eshop/css/panel.css" => "1687947010240","/local/templates/fasionbrick/js/fancy/jquery.fancybox.min.css" => "168509566012500",]; ?>

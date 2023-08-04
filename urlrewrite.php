@@ -56,6 +56,14 @@ $arUrlRewrite=array (
     'PATH' => '/personal/order/index.php',
     'SORT' => 100,
   ),
+  13 => 
+  array (
+    'CONDITION' => '#^([^/]+?)\\??(.*)#',
+    'RULE' => 'SECTION_CODE=$1&$2',
+    'ID' => 'bitrix:catalog.section',
+    'PATH' => '/index.php',
+    'SORT' => 100,
+  ),
   12 => 
   array (
     'CONDITION' => '#^/catalog/#',
