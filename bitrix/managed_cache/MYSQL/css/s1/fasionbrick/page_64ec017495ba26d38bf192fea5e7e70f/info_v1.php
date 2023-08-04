@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/templates/fasionbrick/components/bitrix/main.register/flat/style.css" => "1689511292442","/bitrix/components/bitrix/system.show_message/templates/.default/style.css" => "168794700751",]; ?>
