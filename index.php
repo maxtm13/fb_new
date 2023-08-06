@@ -1,44 +1,60 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("");
-?><section class="main_content" style="text-align: left;"> <section class="catalog_main">
-<!--        Вывод рзделов Каталога--> <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list",
-	"main_page_sections",
-	Array(
-		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
-		"ADD_SECTIONS_CHAIN" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_NOTES" => "",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"COMPONENT_TEMPLATE" => "main_page_sections",
-		"COUNT_ELEMENTS" => "Y",
-		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
-		"FILTER_NAME" => "sectionsFilter",
-		"HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
-		"HIDE_SECTION_NAME" => "N",
-		"IBLOCK_ID" => "4",
-		"IBLOCK_TYPE" => "catalog",
-		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(0=>"DESCRIPTION",1=>"",),
-		"SECTION_ID" => "",
-		"SECTION_URL" => "/catalog/#SECTION_CODE_PATH#/",
-		"SECTION_USER_FIELDS" => array(0=>"",1=>"",),
-		"SHOW_PARENT_NAME" => "Y",
-		"TOP_DEPTH" => "3",
-		"VIEW_MODE" => "LINE"
-	)
-);?> </section> <br>
-<span style="font-size: 48pt;">
-Популярные товары</span><br>
- <br>
- <section class="popular_products">
-<?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section",
-	"catalog_items",
-	Array(
+?>
+    <section class="main_content ">
+        <div class="catalog_main-sections">
+            <div class="container">
+                <div class="main-sections-inner">
+                    <h2 class="main-sections-title">Категории товаров</h2>
+                    <div class="main-sections-subtitle">Мы предлагаем различные виды кирпича для строительства домов,
+                        заборов,
+                        колонн, высотных домов
+                    </div>
+                </div>
+                <!--        Вывод рзделов Каталога-->
+                <div class="main-sections-items">
+                    <? $APPLICATION->IncludeComponent(
+                        "bitrix:catalog.section.list",
+                        "main_page_sections",
+                        array(
+                            "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
+                            "ADD_SECTIONS_CHAIN" => "Y",
+                            "CACHE_FILTER" => "N",
+                            "CACHE_GROUPS" => "Y",
+                            "CACHE_NOTES" => "",
+                            "CACHE_TIME" => "36000000",
+                            "CACHE_TYPE" => "A",
+                            "COMPONENT_TEMPLATE" => "main_page_sections",
+                            "COUNT_ELEMENTS" => "N",
+                            "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+                            "FILTER_NAME" => "sectionsFilter",
+                            "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+                            "HIDE_SECTION_NAME" => "N",
+                            "IBLOCK_ID" => "4",
+                            "IBLOCK_TYPE" => "catalog",
+                            "SECTION_CODE" => "",
+                            "SECTION_FIELDS" => array(0 => "DESCRIPTION", 1 => "",),
+                            "SECTION_ID" => "",
+                            "SECTION_URL" => "/catalog/#SECTION_CODE_PATH#/",
+                            "SECTION_USER_FIELDS" => array(0 => "", 1 => "",),
+                            "SHOW_PARENT_NAME" => "Y",
+                            "TOP_DEPTH" => "3",
+                            "VIEW_MODE" => "LINE"
+                        )
+                    ); ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="popular_products" >
+            <div class="container">
+                <h2 class="popular_products-title">Популярные товары</h2>
+                <div class="popular_products-subtitle">Мы предлагаем различные виды кирпича для строительства домов, заборов, колонн, высотных домов</div>
+            <? $APPLICATION->IncludeComponent(
+	"bitrix:catalog.section", 
+	"catalog_items", 
+	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_PICT_PROP" => "-",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
@@ -76,7 +92,8 @@ $APPLICATION->SetTitle("");
 		"IBLOCK_ID" => "4",
 		"IBLOCK_TYPE" => "catalog",
 		"INCLUDE_SUBSECTIONS" => "Y",
-		"LABEL_PROP" => array(),
+		"LABEL_PROP" => array(
+		),
 		"LAZY_LOAD" => "Y",
 		"LINE_ELEMENT_COUNT" => "3",
 		"LOAD_ON_SCROLL" => "N",
@@ -90,7 +107,10 @@ $APPLICATION->SetTitle("");
 		"MESS_NOT_AVAILABLE_SERVICE" => "Недоступно",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"OFFERS_FIELD_CODE" => array(0=>"",1=>"",),
+		"OFFERS_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"OFFERS_SORT_FIELD" => "sort",
 		"OFFERS_SORT_FIELD2" => "id",
 		"OFFERS_SORT_ORDER" => "asc",
@@ -104,10 +124,12 @@ $APPLICATION->SetTitle("");
 		"PAGER_TITLE" => "Товары",
 		"PAGE_ELEMENT_COUNT" => "4",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => array(0=>"BASE",),
+		"PRICE_CODE" => array(
+			0 => "BASE",
+		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-		"PRODUCT_DISPLAY_MODE" => "N",
+		"PRODUCT_DISPLAY_MODE" => "Y",
 		"PRODUCT_ID_VARIABLE" => "id",
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
@@ -119,14 +141,17 @@ $APPLICATION->SetTitle("");
 		"SECTION_ID" => "",
 		"SECTION_ID_VARIABLE" => "SECTION_ID",
 		"SECTION_URL" => "#SECTION_CODE#",
-		"SECTION_USER_FIELDS" => array(0=>"",1=>"",),
+		"SECTION_USER_FIELDS" => array(
+			0 => "",
+			1 => "",
+		),
 		"SEF_MODE" => "N",
-		"SET_BROWSER_TITLE" => "Y",
+		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
-		"SET_META_KEYWORDS" => "Y",
+		"SET_META_KEYWORDS" => "N",
 		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "Y",
+		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
 		"SHOW_ALL_WO_SECTION" => "N",
 		"SHOW_CLOSE_POPUP" => "N",
@@ -142,6 +167,11 @@ $APPLICATION->SetTitle("");
 		"USE_ENHANCED_ECOMMERCE" => "N",
 		"USE_MAIN_ELEMENT_SECTION" => "N",
 		"USE_PRICE_COUNT" => "N",
-		"USE_PRODUCT_QUANTITY" => "N"
-	)
-);?> </section> </section> <br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+		"USE_PRODUCT_QUANTITY" => "N",
+		"OFFER_ADD_PICT_PROP" => "MORE_FOTO"
+	),
+	false
+); ?>
+            </div>
+        </div>
+    </section> <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

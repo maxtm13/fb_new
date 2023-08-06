@@ -23,7 +23,7 @@ $CurUri = $APPLICATION->GetCurUri();
     // JS
     CJSCore::Init(array("jquery3"));
     Asset::getInstance()->addJs('https://kit.fontawesome.com/f8a5dcd61e.js');
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH  . '/css/slick/slick.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/css/slick/slick.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/fancy/jquery.fancybox.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/myscripts.min.js');
     // HEADERS
@@ -168,34 +168,34 @@ $CurUri = $APPLICATION->GetCurUri();
                 <div class="cart_title">Корзина
                     <? // Ссылка на корзину
                     $APPLICATION->IncludeComponent(
-	"bitrix:sale.basket.basket.line", 
-	"top_menu_basket", 
-	array(
-		"COMPONENT_TEMPLATE" => "top_menu_basket",
-		"PATH_TO_BASKET" => "/personal/cart/",
-		"PATH_TO_ORDER" => "personal/order_make/",
-		"SHOW_NUM_PRODUCTS" => "Y",
-		"SHOW_TOTAL_PRICE" => "Y",
-		"SHOW_EMPTY_VALUES" => "Y",
-		"SHOW_PERSONAL_LINK" => "N",
-		"PATH_TO_PERSONAL" => SITE_DIR."personal/",
-		"SHOW_AUTHOR" => "N",
-		"PATH_TO_AUTHORIZE" => "",
-		"SHOW_REGISTRATION" => "N",
-		"PATH_TO_REGISTER" => SITE_DIR."login/",
-		"PATH_TO_PROFILE" => SITE_DIR."personal/",
-		"SHOW_PRODUCTS" => "N",
-		"SHOW_DELAY" => "N",
-		"SHOW_NOTAVAIL" => "N",
-		"SHOW_IMAGE" => "Y",
-		"SHOW_PRICE" => "Y",
-		"SHOW_SUMMARY" => "Y",
-		"POSITION_FIXED" => "N",
-		"HIDE_ON_BASKET_PAGES" => "N",
-		"MAX_IMAGE_SIZE" => "70"
-	),
-	false
-);
+                        "bitrix:sale.basket.basket.line",
+                        "top_menu_basket",
+                        array(
+                            "COMPONENT_TEMPLATE" => "top_menu_basket",
+                            "PATH_TO_BASKET" => "/personal/cart/",
+                            "PATH_TO_ORDER" => "personal/order_make/",
+                            "SHOW_NUM_PRODUCTS" => "Y",
+                            "SHOW_TOTAL_PRICE" => "Y",
+                            "SHOW_EMPTY_VALUES" => "Y",
+                            "SHOW_PERSONAL_LINK" => "N",
+                            "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
+                            "SHOW_AUTHOR" => "N",
+                            "PATH_TO_AUTHORIZE" => "",
+                            "SHOW_REGISTRATION" => "N",
+                            "PATH_TO_REGISTER" => SITE_DIR . "login/",
+                            "PATH_TO_PROFILE" => SITE_DIR . "personal/",
+                            "SHOW_PRODUCTS" => "N",
+                            "SHOW_DELAY" => "N",
+                            "SHOW_NOTAVAIL" => "N",
+                            "SHOW_IMAGE" => "Y",
+                            "SHOW_PRICE" => "Y",
+                            "SHOW_SUMMARY" => "Y",
+                            "POSITION_FIXED" => "N",
+                            "HIDE_ON_BASKET_PAGES" => "N",
+                            "MAX_IMAGE_SIZE" => "70"
+                        ),
+                        false
+                    );
                     ?>
                 </div>
             </a>
@@ -206,7 +206,7 @@ $CurUri = $APPLICATION->GetCurUri();
 
 <?
 
-if ($CurDir === '/' && (!str_starts_with($CurUri,'/test.php'))) { ?>
+if ($CurDir === '/' && (!str_starts_with($CurUri, '/test.php'))) { ?>
     <section class="slider__main">
         <p class="Slider_infoBlock">
             <? // Сладер на главной
@@ -283,21 +283,25 @@ if ($CurDir === '/' && (!str_starts_with($CurUri,'/test.php'))) { ?>
             ); ?>
         </p>
     </section>
-    <?  } else { ?>
+<? } else { ?>
     <div class="margin_top"></div>
 <? } ?>
 
 <div class="container">
-    <?// Навигационная цепочка - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/breadcrumb.php
+    <? // Навигационная цепочка - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/breadcrumb.php
     $APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	".default", 
-	array(
-		"START_FROM" => "0",
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?>
-    <h1><?$APPLICATION->ShowTitle(false);?></h1>
+        "bitrix:breadcrumb",
+        ".default",
+        array(
+            "START_FROM" => "0",
+            "PATH" => "",
+            "SITE_ID" => "s1",
+            "COMPONENT_TEMPLATE" => ".default"
+        ),
+        false
+    ); ?>
+    <h1><? $APPLICATION->ShowTitle(false); ?></h1>
+</div>
+<? if ($CurDir !== '/') {?>
+<div class="container">
+<?php } ?>
