@@ -136,6 +136,9 @@
     </div>
 
 </div>
+<? if ($CurDir !== '/') {?>
+</div>
 
+<?php } ?>
 </body>
 </html>

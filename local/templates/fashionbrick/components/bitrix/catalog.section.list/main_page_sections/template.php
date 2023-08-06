@@ -64,11 +64,15 @@ if ('Y' == $arParams['SHOW_PARENT_NAME'] && 0 < $arResult['SECTION']['ID'])
 if (0 < $arResult["SECTIONS_COUNT"])
 {
 ?>
+
 <ul class="<? echo $arCurView['LIST']; ?>">
+
 <?
+
 	switch ($arParams['VIEW_MODE'])
 	{
 		case 'LINE':
+		    $i=1;
 			foreach ($arResult['SECTIONS'] as &$arSection)
 			{
 				$this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
@@ -92,21 +96,29 @@ if (0 < $arResult["SECTIONS_COUNT"])
 				<a
 					href="<? echo $arSection['SECTION_PAGE_URL']; ?>"
 					class="bx_catalog_line_img"
-					style="background-image: url('<? echo $arSection['PICTURE']['SRC']; ?>');"
 					title="<? echo $arSection['PICTURE']['TITLE']; ?>"
-				></a>
-				<h2 class="bx_catalog_line_title"><a href="<? echo $arSection['SECTION_PAGE_URL']; ?>"><? echo $arSection['NAME']; ?></a><?
+				>
+                    <div class="catalog__section-img">
+                        <img src="<? echo $arSection['PICTURE']['SRC']; ?>" alt="">
+                    </div>
+                </a>
+				<h3 class="bx_catalog_line_title"><a href="<? echo $arSection['SECTION_PAGE_URL']; ?>"><? echo $arSection['NAME']; ?></a><?
 				if ($arParams["COUNT_ELEMENTS"] && $arSection['ELEMENT_CNT'] !== null)
 				{
 					?> <span>(<? echo $arSection['ELEMENT_CNT']; ?>)</span><?
 				}
-				?></h2><?
+				?></h3><?
 				if ('' != $arSection['DESCRIPTION'])
 				{
 					?><p class="bx_catalog_line_description"><? echo $arSection['DESCRIPTION']; ?></p><?
 				}
-				?><div style="clear: both;"></div>
+				?>
+                <a href="<? echo $arSection['SECTION_PAGE_URL']; ?>" class="btn_section-buy">Купить</a>
+                <div style="clear: both;"></div>
 				</li><?
+                if ($i++>=3){
+                    break;
+                }
 			}
 			unset($arSection);
 			break;
