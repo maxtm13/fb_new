@@ -139,7 +139,3 @@
 
 </body>
 </html>
-
-<!--<script>-->
-<!--    document.write("Copyright &copy; "+ new Date().getFullYear()+ " Company Name. All rights reserved.");-->
-<!--</script>-->
