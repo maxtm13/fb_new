@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/local/templates/fashionbrick/components/bitrix/main.profile/flat/style.css" => "1690197658699","/bitrix/components/bitrix/socserv.auth.split/templates/.default/style.css" => "16879470526318",]; ?>

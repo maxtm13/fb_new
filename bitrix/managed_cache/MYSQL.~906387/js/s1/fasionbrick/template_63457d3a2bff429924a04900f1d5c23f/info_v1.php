@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/local/templates/fasionbrick/js/fancy/jquery.fancybox.min.js" => "168509566090192","/bitrix/components/bitrix/menu/templates/horizontal_multilevel/script.js" => "1687947007407",]; ?>
