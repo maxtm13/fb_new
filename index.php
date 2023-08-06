@@ -1,17 +1,11 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("");
-?>
-
-    <section class="main_content">
-
-
-            <section class="catalog_main">
-                <!--        Вывод рзделов Каталога-->
-                <? $APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list", 
-	"main_page_sections", 
-	array(
+?><section class="main_content" style="text-align: left;"> <section class="catalog_main">
+<!--        Вывод рзделов Каталога--> <?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.section.list",
+	"main_page_sections",
+	Array(
 		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"CACHE_FILTER" => "N",
@@ -24,31 +18,29 @@ $APPLICATION->SetTitle("");
 		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
 		"FILTER_NAME" => "sectionsFilter",
 		"HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+		"HIDE_SECTION_NAME" => "N",
 		"IBLOCK_ID" => "4",
 		"IBLOCK_TYPE" => "catalog",
 		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(
-			0 => "",
-			1 => "",
-		),
-		"SECTION_ID" => "16",
-		"SECTION_URL" => "",
-		"SECTION_USER_FIELDS" => array(
-			0 => "",
-			1 => "",
-		),
+		"SECTION_FIELDS" => array(0=>"DESCRIPTION",1=>"",),
+		"SECTION_ID" => "",
+		"SECTION_URL" => "/catalog/#SECTION_CODE_PATH#/",
+		"SECTION_USER_FIELDS" => array(0=>"",1=>"",),
 		"SHOW_PARENT_NAME" => "Y",
-		"TOP_DEPTH" => "1",
+		"TOP_DEPTH" => "3",
 		"VIEW_MODE" => "LINE"
-	),
-	false
-); ?> </section> <br>
-
-                <? $APPLICATION->IncludeComponent(
-	"bitrix:catalog.section", 
-	"catalog_items", 
-	array(
+	)
+);?> </section> <br>
+<span style="font-size: 48pt;">
+Популярные товары</span><br>
+ <br>
+ <section class="popular_products">
+<?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.section",
+	"catalog_items",
+	Array(
 		"ACTION_VARIABLE" => "action",
+		"ADD_PICT_PROP" => "-",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"ADD_TO_BASKET_ACTION" => "ADD",
@@ -65,8 +57,10 @@ $APPLICATION->SetTitle("");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"COMPATIBLE_MODE" => "N",
+		"COMPONENT_TEMPLATE" => "catalog_items",
 		"CONVERT_CURRENCY" => "N",
-		"DETAIL_URL" => "",
+		"CUSTOM_FILTER" => "{\"CLASS_ID\":\"CondGroup\",\"DATA\":{\"All\":\"AND\",\"True\":\"True\"},\"CHILDREN\":[]}",
+		"DETAIL_URL" => "/catalog/#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_COMPARE" => "N",
@@ -82,6 +76,7 @@ $APPLICATION->SetTitle("");
 		"IBLOCK_ID" => "4",
 		"IBLOCK_TYPE" => "catalog",
 		"INCLUDE_SUBSECTIONS" => "Y",
+		"LABEL_PROP" => array(),
 		"LAZY_LOAD" => "Y",
 		"LINE_ELEMENT_COUNT" => "3",
 		"LOAD_ON_SCROLL" => "N",
@@ -95,6 +90,11 @@ $APPLICATION->SetTitle("");
 		"MESS_NOT_AVAILABLE_SERVICE" => "Недоступно",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
+		"OFFERS_FIELD_CODE" => array(0=>"",1=>"",),
+		"OFFERS_SORT_FIELD" => "sort",
+		"OFFERS_SORT_FIELD2" => "id",
+		"OFFERS_SORT_ORDER" => "asc",
+		"OFFERS_SORT_ORDER2" => "desc",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -102,28 +102,24 @@ $APPLICATION->SetTitle("");
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Товары",
-		"PAGE_ELEMENT_COUNT" => "3",
+		"PAGE_ELEMENT_COUNT" => "4",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => array(
-			0 => "BASE",
-		),
+		"PRICE_CODE" => array(0=>"BASE",),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+		"PRODUCT_DISPLAY_MODE" => "N",
 		"PRODUCT_ID_VARIABLE" => "id",
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
-		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false}]",
+		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'3','BIG_DATA':false}]",
 		"PRODUCT_SUBSCRIPTION" => "Y",
 		"RCM_PROD_ID" => $_REQUEST["PRODUCT_ID"],
 		"RCM_TYPE" => "personal",
 		"SECTION_CODE" => "",
 		"SECTION_ID" => "",
 		"SECTION_ID_VARIABLE" => "SECTION_ID",
-		"SECTION_URL" => "",
-		"SECTION_USER_FIELDS" => array(
-			0 => "",
-			1 => "",
-		),
+		"SECTION_URL" => "#SECTION_CODE#",
+		"SECTION_USER_FIELDS" => array(0=>"",1=>"",),
 		"SEF_MODE" => "N",
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
@@ -146,24 +142,6 @@ $APPLICATION->SetTitle("");
 		"USE_ENHANCED_ECOMMERCE" => "N",
 		"USE_MAIN_ELEMENT_SECTION" => "N",
 		"USE_PRICE_COUNT" => "N",
-		"USE_PRODUCT_QUANTITY" => "N",
-		"COMPONENT_TEMPLATE" => "catalog_items",
-		"CUSTOM_FILTER" => "{\"CLASS_ID\":\"CondGroup\",\"DATA\":{\"All\":\"AND\",\"True\":\"True\"},\"CHILDREN\":[]}",
-		"OFFERS_SORT_FIELD" => "sort",
-		"OFFERS_SORT_ORDER" => "asc",
-		"OFFERS_SORT_FIELD2" => "id",
-		"OFFERS_SORT_ORDER2" => "desc",
-		"OFFERS_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"PRODUCT_DISPLAY_MODE" => "N",
-		"ADD_PICT_PROP" => "-",
-		"LABEL_PROP" => array(
-		)
-	),
-	false
-); ?>
-
-    </section>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+		"USE_PRODUCT_QUANTITY" => "N"
+	)
+);?> </section> </section> <br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
