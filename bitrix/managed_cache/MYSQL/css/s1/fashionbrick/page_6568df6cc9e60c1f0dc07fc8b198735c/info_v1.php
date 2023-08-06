@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/local/templates/fashionbrick/components/bitrix/catalog.section.list/main_page_sections/style.css" => "16901976635941","/bitrix/components/bitrix/catalog.item/templates/bootstrap_v4/style.css" => "168794702523694",]; ?>

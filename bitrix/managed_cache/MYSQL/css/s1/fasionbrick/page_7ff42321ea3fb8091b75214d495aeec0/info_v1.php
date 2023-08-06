@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/local/templates/fasionbrick/components/bitrix/system.auth.changepasswd/flat/style.css" => "1689755083426",]; ?>

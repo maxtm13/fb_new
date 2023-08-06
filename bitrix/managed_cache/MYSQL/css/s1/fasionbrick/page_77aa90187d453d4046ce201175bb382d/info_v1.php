@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/local/templates/fasionbrick/components/bitrix/sale.personal.order.list/orders_list/style.css" => "168951052913626","/bitrix/components/bitrix/sale.order.payment.change/templates/.default/style.css" => "16879470445814",]; ?>
