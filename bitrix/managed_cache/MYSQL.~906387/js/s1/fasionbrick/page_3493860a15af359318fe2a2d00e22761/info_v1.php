@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/local/templates/fasionbrick/components/bitrix/menu/main_menu/script.js" => "1689256995407",]; ?>
