@@ -120,7 +120,9 @@ $containerName = 'container-'.$navParams['NavNum'];
 $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_THEME'] : '';
 
 ?>
-<div> <? // wrapper ?>
+<div>
+
+    <? // wrapper ?>
 
 	<?
 	//region Pagination
@@ -140,6 +142,8 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 	?>
 		<div class="mb-4 catalog-section" data-entity="<?=$containerName?>">
 			<!-- items-container -->
+
+
 			<?
 			if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
 			{

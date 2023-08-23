@@ -53,6 +53,7 @@ $CurUri = $APPLICATION->GetCurUri();
 <? $APPLICATION->ShowPanel(); ?>
 <header class="header">
     <div class="container">
+
         <div class="header__items">
             <!-- Область контактов-->
             <div class="header__items-wrapper">
@@ -155,50 +156,50 @@ $CurUri = $APPLICATION->GetCurUri();
             ); ?>
         </div>
         <div class="cart">
-            <a href="/personal/cart/" class="cart-link">
-                <div class="img-cart">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="26" viewBox="0 0 23 26" stroke="#f5f5f5"
-                         fill="none">
-                        <path d="M2.02421 9.01692C2.07258 8.415 2.57517 7.95117 3.17904 7.95117H19.2878C19.8917 7.95117 20.3943 8.415 20.4426 9.01692L21.4592 21.6681C21.5676 23.0167 20.5025 24.1708 19.1495 24.1708H3.31724C1.96437 24.1708 0.899225 23.0167 1.0076 21.6681L2.02421 9.01692Z"
-                              stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M15.8675 11.4269V5.63419C15.8675 3.0748 13.7927 1 11.2333 1C8.67392 1 6.59912 3.0748 6.59912 5.63419V11.4269"
-                              stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="cart_title">Корзина
+
+<!--                <div class="img-cart">-->
+<!--                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="26" viewBox="0 0 23 26" stroke="#f5f5f5"-->
+<!--                         fill="none">-->
+<!--                        <path d="M2.02421 9.01692C2.07258 8.415 2.57517 7.95117 3.17904 7.95117H19.2878C19.8917 7.95117 20.3943 8.415 20.4426 9.01692L21.4592 21.6681C21.5676 23.0167 20.5025 24.1708 19.1495 24.1708H3.31724C1.96437 24.1708 0.899225 23.0167 1.0076 21.6681L2.02421 9.01692Z"-->
+<!--                              stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--                        <path d="M15.8675 11.4269V5.63419C15.8675 3.0748 13.7927 1 11.2333 1C8.67392 1 6.59912 3.0748 6.59912 5.63419V11.4269"-->
+<!--                              stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--                    </svg>-->
+<!--                </div>-->
+                <div class="cart_title cart-link">
                     <? // Ссылка на корзину
                     $APPLICATION->IncludeComponent(
-                        "bitrix:sale.basket.basket.line",
-                        "top_menu_basket",
-                        array(
-                            "COMPONENT_TEMPLATE" => "top_menu_basket",
-                            "PATH_TO_BASKET" => "/personal/cart/",
-                            "PATH_TO_ORDER" => "personal/order_make/",
-                            "SHOW_NUM_PRODUCTS" => "Y",
-                            "SHOW_TOTAL_PRICE" => "Y",
-                            "SHOW_EMPTY_VALUES" => "Y",
-                            "SHOW_PERSONAL_LINK" => "N",
-                            "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
-                            "SHOW_AUTHOR" => "N",
-                            "PATH_TO_AUTHORIZE" => "",
-                            "SHOW_REGISTRATION" => "N",
-                            "PATH_TO_REGISTER" => SITE_DIR . "login/",
-                            "PATH_TO_PROFILE" => SITE_DIR . "personal/",
-                            "SHOW_PRODUCTS" => "N",
-                            "SHOW_DELAY" => "N",
-                            "SHOW_NOTAVAIL" => "N",
-                            "SHOW_IMAGE" => "Y",
-                            "SHOW_PRICE" => "Y",
-                            "SHOW_SUMMARY" => "Y",
-                            "POSITION_FIXED" => "N",
-                            "HIDE_ON_BASKET_PAGES" => "N",
-                            "MAX_IMAGE_SIZE" => "70"
-                        ),
-                        false
-                    );
+	"bitrix:sale.basket.basket.line", 
+	"top_menu_basket", 
+	array(
+		"COMPONENT_TEMPLATE" => "top_menu_basket",
+		"PATH_TO_BASKET" => "/personal/cart/",
+		"PATH_TO_ORDER" => "personal/order_make/",
+		"SHOW_NUM_PRODUCTS" => "Y",
+		"SHOW_TOTAL_PRICE" => "N",
+		"SHOW_EMPTY_VALUES" => "Y",
+		"SHOW_PERSONAL_LINK" => "N",
+		"PATH_TO_PERSONAL" => SITE_DIR."personal/",
+		"SHOW_AUTHOR" => "N",
+		"PATH_TO_AUTHORIZE" => "",
+		"SHOW_REGISTRATION" => "N",
+		"PATH_TO_REGISTER" => SITE_DIR."login/",
+		"PATH_TO_PROFILE" => SITE_DIR."personal/",
+		"SHOW_PRODUCTS" => "N",
+		"SHOW_DELAY" => "N",
+		"SHOW_NOTAVAIL" => "N",
+		"SHOW_IMAGE" => "Y",
+		"SHOW_PRICE" => "Y",
+		"SHOW_SUMMARY" => "Y",
+		"POSITION_FIXED" => "N",
+		"HIDE_ON_BASKET_PAGES" => "N",
+		"MAX_IMAGE_SIZE" => "70"
+	),
+	false
+);
                     ?>
                 </div>
-            </a>
+
         </div>
     </div>
 
@@ -208,8 +209,8 @@ $CurUri = $APPLICATION->GetCurUri();
 
 if ($CurDir === '/' && (!str_starts_with($CurUri, '/test.php'))) { ?>
     <section class="slider__main">
-        <p class="Slider_infoBlock">
-            <? // Сладер на главной
+        <div class="slider__main-inner">
+                    <? // Сладер на главной
             $APPLICATION->IncludeComponent(
                 "bitrix:news.list",
                 "slider",
@@ -281,27 +282,24 @@ if ($CurDir === '/' && (!str_starts_with($CurUri, '/test.php'))) { ?>
                 ),
                 false
             ); ?>
-        </p>
+        </div>
     </section>
 <? } else { ?>
     <div class="margin_top"></div>
+        <div class="container">
+            <? // Навигационная цепочка - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/breadcrumb.php
+            $APPLICATION->IncludeComponent(
+                "bitrix:breadcrumb",
+                ".default",
+                array(
+                    "START_FROM" => "0",
+                    "PATH" => "",
+                    "SITE_ID" => "s1",
+                    "COMPONENT_TEMPLATE" => ".default"
+                ),
+                false
+            ); ?>
+            <h1><? $APPLICATION->ShowTitle(false); ?></h1>
 <? } ?>
 
-<div class="container">
-    <? // Навигационная цепочка - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/breadcrumb.php
-    $APPLICATION->IncludeComponent(
-        "bitrix:breadcrumb",
-        ".default",
-        array(
-            "START_FROM" => "0",
-            "PATH" => "",
-            "SITE_ID" => "s1",
-            "COMPONENT_TEMPLATE" => ".default"
-        ),
-        false
-    ); ?>
-    <h1><? $APPLICATION->ShowTitle(false); ?></h1>
-</div>
-<? if ($CurDir !== '/') {?>
-<div class="container">
-<?php } ?>
+
