@@ -23,8 +23,13 @@ while ($ob = $res->GetNext()) {
 //    }
 //print_r($VALUES)
 foreach ($VALUES as $key=>$props){
-
-    print_r($props);
+        for ($i=0; $i<(count($props)); $i++){
+           print_r($key);
+           foreach ($props as $name=>$z){
+               $array1[$key]=[$name, $z]
+           }
+           print_r($props[$i]);
+        }
 //    foreach ($props as $item);{
 //        foreach ($item as $id=>$it){
 //
@@ -38,6 +43,7 @@ foreach ($VALUES as $key=>$props){
 //    }
 
     }
+//print_r($array1);
 //    for ($i=0; $i<=count($props); $i++){
 //        print_r($props[$i]);
 //        print_r("</br>");
