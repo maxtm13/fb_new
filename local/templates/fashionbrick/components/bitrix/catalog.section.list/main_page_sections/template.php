@@ -115,10 +115,12 @@ if (0 < $arResult["SECTIONS_COUNT"])
 				?>
                 <a href="<? echo $arSection['SECTION_PAGE_URL']; ?>" class="btn_section-buy">Купить</a>
                 <div style="clear: both;"></div>
-				</li><?
-                if ($i++>=3){
-                    break;
-                }
+				</li>
+
+                <?
+//                if ($i++>=3){
+//                    break;
+//                }
 			}
 			unset($arSection);
 			break;

@@ -122,6 +122,7 @@ use \Bitrix\Main\Localization\Loc;
         </a>
     <? endif; ?>
     </h3>
+   
     <?
     if (!empty($arParams['PRODUCT_BLOCKS_ORDER'])) {
         foreach ($arParams['PRODUCT_BLOCKS_ORDER'] as $blockName) {

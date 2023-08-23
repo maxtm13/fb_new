@@ -14,17 +14,15 @@ $this->setFrameMode(true);
 ?>
 
 
-<div class="main_slider">
+
     <? if ($arParams["DISPLAY_TOP_PAGER"]): ?>
-        <?= $arResult["NAV_STRING"] ?><br/>
+        <?= $arResult["NAV_STRING"] ?>
     <? endif; ?>
     <? foreach ($arResult["ITEMS"] as $arItem): ?>
         <?
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
-
-
         <div class="slider" style="background-image: url('<?= $arItem["DETAIL_PICTURE"]["SRC"] ?>')">
             <div class="slider-wrapper">
                 <div class="wrapper_content">
@@ -61,5 +59,5 @@ $this->setFrameMode(true);
     <? endforeach; ?>
 </div>
 <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
-    <br/><?= $arResult["NAV_STRING"] ?>
+    <?= $arResult["NAV_STRING"] ?>
 <? endif; ?>
