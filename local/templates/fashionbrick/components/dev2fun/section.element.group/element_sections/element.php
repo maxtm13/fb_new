@@ -12,6 +12,7 @@ $res = CIBlockElement::GetProperty($arParams['IBLOCK_ID'], $arResult['ID'], arra
 while ($ob = $res->GetNext()) {
     $VALUES[$ob['NAME']][] = [$ob['CODE'] => $ob['VALUE']];
 }
+
 //    foreach ($VALUES as $prop=>$val_prop) {
 //        print_r($prop);
 //        foreach ($val_prop as $key => $newValue) {
@@ -21,38 +22,76 @@ while ($ob = $res->GetNext()) {
 //
 //       print_r('</br>')
 //    }
-//print_r($VALUES)
+//print_r($VALUES)?>
+<p class="news-item" id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
+    <?php if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["PREVIEW_PICTURE"])): ?>
+    <?php if (!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arResult["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])): ?>
+        <a href="<?= $arResult["DETAIL_PAGE_URL"] ?>"><img
+                class="preview_picture"
+                border="0"
+                src="<?= $arResult["PREVIEW_PICTURE"]["SRC"] ?>"
+                width="<?= $arResult["PREVIEW_PICTURE"]["WIDTH"] ?>"
+                height="<?= $arResult["PREVIEW_PICTURE"]["HEIGHT"] ?>"
+                alt="<?= $arResult["PREVIEW_PICTURE"]["ALT"] ?>"
+                title="<?= $arResult["PREVIEW_PICTURE"]["TITLE"] ?>"
+                style="float:left"
+            /></a>
+    <?php else: ?>
+        <img
+            class="preview_picture"
+            border="0"
+            src="<?= $arResult["PREVIEW_PICTURE"]["SRC"] ?>"
+            width="<?= $arResult["PREVIEW_PICTURE"]["WIDTH"] ?>"
+            height="<?= $arResult["PREVIEW_PICTURE"]["HEIGHT"] ?>"
+            alt="<?= $arResult["PREVIEW_PICTURE"]["ALT"] ?>"
+            title="<?= $arResult["PREVIEW_PICTURE"]["TITLE"] ?>"
+            style="float:left"
+        />
+    <?php endif; ?>
+<?php endif ?>
+    <?php if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
+    <span class="news-date-time"><?php echo $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
+<?php endif ?>
+    <?php if ($arParams["DISPLAY_NAME"] != "N" && $arResult["NAME"]): ?>
+    <?php if (!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arResult["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])): ?>
+        <a href="<?php echo $arResult["DETAIL_PAGE_URL"] ?>"><b><?php echo $arResult["NAME"] ?></b></a><br/>
+    <?php else: ?>
+        <b><?php echo $arResult["NAME"] ?></b><br/>
+    <?php endif; ?>
+<?php endif; ?>
+    <?php if ($arParams["DISPLAY_PREVIEW_TEXT"] != "N" && $arResult["PREVIEW_TEXT"]): ?>
+    <?php echo $arResult["PREVIEW_TEXT"]; ?>
+<?php endif; ?>
+    <?php if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["PREVIEW_PICTURE"])): ?>
+    <div style="clear:both"></div>
+<?php endif ?>
+<?php foreach ($arResult["FIELDS"] as $code => $value): ?>
+    <small>
+        <?= GetMessage("IBLOCK_FIELD_" . $code) ?>:&nbsp;<?= $value; ?>
+    </small><br/>
+
+<?php endforeach; ?>
+<?php
 foreach ($VALUES as $key=>$props){
-        for ($i=0; $i<(count($props)); $i++){
-           print_r($key);
-           foreach ($props as $name=>$z){
-               $array1[$key]=[$name, $z]
-           }
-           print_r($props[$i]);
+    for ($i=0; $i<(count($props)); $i++){
+        foreach ($props as $name=>$z){
+            $array1[$key]=[$name, $z];
         }
-//    foreach ($props as $item);{
-//        foreach ($item as $id=>$it){
-//
-//           echo $key." :";
-//           echo $id." :";
-//
-//           echo $it."";
-//       }
-//       echo"</br>";
-
-//    }
-
+        print_r($props[$i]);
     }
-//print_r($array1);
-//    for ($i=0; $i<=count($props); $i++){
-//        print_r($props[$i]);
-//        print_r("</br>");
-//
-//    }
-
-
-//print_r($arrFinal);
+}
 ?>
+<?php foreach ($arResult["DISPLAY_PROPERTIES"] as $pid => $arProperty): ?>
+    <small>
+        <?= $arProperty["NAME"] ?>:&nbsp;
+        <?php if (is_array($arProperty["DISPLAY_VALUE"])): ?>
+            <?= implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]); ?>
+        <?php else: ?>
+            <?= $arProperty["DISPLAY_VALUE"]; ?>
+        <?php endif ?>
+    </small><br/>
+<?php endforeach; ?>
+
 
 <?php
 unset($VALUES);
