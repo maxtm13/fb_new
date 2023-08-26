@@ -61,6 +61,10 @@
       margin: 5px 0;
       background-color: rgba(63, 69, 211, 0.05);
       padding: 10px;
+      .ATT_adress {
+        display: flex;
+        column-gap: 10px;
+      }
       .ATT_Phone {
         a + a {
           margin-left: 15px;
