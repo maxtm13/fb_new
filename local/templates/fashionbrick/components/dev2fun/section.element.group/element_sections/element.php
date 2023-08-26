@@ -22,17 +22,19 @@ while ($ob = $res->GetNext()) {
   <div class="sale-name" ><?=($arResult["FIELDS"]['NAME'])?></div>
 <?php foreach ($arResult["FIELDS"] as $code => $value): ?>
 <? if ($code!='NAME'):?>
-    <p class="<?=$code?>"> <?= $value; ?></p><br/>
+    <div class="<?=$code?>"> <?= $value; ?></div>
 <?php endif ?>
 <?php endforeach; ?>
 <?php foreach ($VALUES as $ind => $val):?>
     <? switch ($ind){
         case 'ATT_Phone': ?>
-            <div class="<?=$ind;?>"><?=($VALUES[$ind][0].': ');
+            <div class="<?=$ind;?>"> <?if ($VALUES[$ind][1]!="") echo('<i class="fa fa-phone"></i>')?>
+            <?//=($VALUES[$ind][0].': ');
                 for ($i = 1; $i <= count($val);$i+=2)
-                {?>
+                { ?>
+
                    <a href="tel:<?=preg_replace('/[^0-9]/', '', ($VALUES[$ind][$i]));?>" class="tel-ink"> <?=($VALUES[$ind][$i]);?></a>
-                    <?if (count($val)>2) echo('; ');
+                    <?
                 };
                     ?>
                     </div><?
@@ -40,7 +42,8 @@ while ($ob = $res->GetNext()) {
         case 'ATT_site':?>
                 <?if (!$VALUES[$ind][1]==''){?>
                 <div class="<?=$ind;?>">
-                <?=($VALUES[$ind][0].': ');
+                <i class="fa fa-laptop"></i>
+<!--                --><?//=($VALUES[$ind][0].': ');
                 for ($i = 1; $i <= count($val);$i+=2)
                 {?>
                    <a href="<?=($VALUES[$ind][$i]);?>" class="site-link"> <?=($VALUES[$ind][$i]);?></a>
@@ -51,7 +54,8 @@ while ($ob = $res->GetNext()) {
                 break;
         case 'ATT_email':?>
             <?if (!$VALUES[$ind][1]==''){?>
-                <div class="<?=$ind;?>"><?=($VALUES[$ind][0].': ');
+                <div class="<?=$ind;?>"> <i class="fa fa-envelope-o"></i>
+                <?//=($VALUES[$ind][0].': ');
                     for ($i = 1; $i <= count($val);$i+=2)
                     {?>
                        <a href="mailto:<?=($VALUES[$ind][$i]);?>" class="email-ink"> <?=($VALUES[$ind][$i]);?></a>
