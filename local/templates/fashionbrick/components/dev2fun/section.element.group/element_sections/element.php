@@ -34,6 +34,7 @@ while ($ob = $res->GetNext()) {
 ////        print_r($VALUES[$ind][$i]);
 //        }
 //endforeach;
+//print_r($arResult)
     ?>
 <div class="news-item" id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
 <?php if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["PREVIEW_PICTURE"])): ?>
@@ -66,7 +67,7 @@ while ($ob = $res->GetNext()) {
 <?php endif ?>
 <?php if ($arParams["DISPLAY_NAME"] != "N" && $arResult["NAME"]): ?>
     <?php if (!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arResult["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])): ?>
-        <a href="<?php echo $arResult["DETAIL_PAGE_URL"] ?>"><b><?php echo $arResult["NAME"] ?></b></a><br/>
+        <p><b><?php echo $arResult["NAME"] ?></b></p><br/>
     <?php else: ?>
         <b><?php echo $arResult["NAME"] ?></b><br/>
     <?php endif; ?>
@@ -79,7 +80,7 @@ while ($ob = $res->GetNext()) {
 <?php endif ?>
 <?php foreach ($arResult["FIELDS"] as $code => $value): ?>
     <small>
-        <?= GetMessage("IBLOCK_FIELD_" . $code) ?>:&nbsp;<?= $value; ?>
+        111 <?=$code?> <?= GetMessage("IBLOCK_FIELD_" . $code) ?>:&nbsp;<?= $value; ?>
     </small><br/>
 <?php endforeach; ?>
 <?php foreach ($VALUES as $ind => $val):?>
