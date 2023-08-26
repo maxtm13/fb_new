@@ -16,72 +16,14 @@ while ($ob = $res->GetNext()) {
 ?>
 
 
-<?php
-//    foreach ($VALUES as $prop=>$val_prop) {
-//        print_r($prop['ATT_Phone'] );
-//        foreach ($val_prop as $key => $newValue) {
-//
-//            $varprop[$key][] = $newValue;
-//        }
-//
-//       print_r('</br>')
-//    }
-//print_r($VALUES["ATT_site"]);
-//echo '***********<br>';
-//foreach ($VALUES as $ind => $val):
-////    print_r($ind);
-//    for ($i = 0; $i < count($val);$i++) {
-////        print_r($VALUES[$ind][$i]);
-//        }
-//endforeach;
-//print_r($arResult)
-    ?>
-<div class="news-item" id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
-<?php if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["PREVIEW_PICTURE"])): ?>
-    <?php if (!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arResult["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])): ?>
-        <a href="<?= $arResult["DETAIL_PAGE_URL"] ?>"><img
-                    class="preview_picture"
-                    border="0"
-                    src="<?= $arResult["PREVIEW_PICTURE"]["SRC"] ?>"
-                    width="<?= $arResult["PREVIEW_PICTURE"]["WIDTH"] ?>"
-                    height="<?= $arResult["PREVIEW_PICTURE"]["HEIGHT"] ?>"
-                    alt="<?= $arResult["PREVIEW_PICTURE"]["ALT"] ?>"
-                    title="<?= $arResult["PREVIEW_PICTURE"]["TITLE"] ?>"
-                    style="float:left"
-            /></a>
-    <?php else: ?>
-        <img
-                class="preview_picture"
-                border="0"
-                src="<?= $arResult["PREVIEW_PICTURE"]["SRC"] ?>"
-                width="<?= $arResult["PREVIEW_PICTURE"]["WIDTH"] ?>"
-                height="<?= $arResult["PREVIEW_PICTURE"]["HEIGHT"] ?>"
-                alt="<?= $arResult["PREVIEW_PICTURE"]["ALT"] ?>"
-                title="<?= $arResult["PREVIEW_PICTURE"]["TITLE"] ?>"
-                style="float:left"
-        />
-    <?php endif; ?>
-<?php endif ?>
-<?php if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
-    <span class="news-date-time"><?php echo $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
-<?php endif ?>
-<?php if ($arParams["DISPLAY_NAME"] != "N" && $arResult["NAME"]): ?>
-    <?php if (!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arResult["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])): ?>
-        <p><b><?php echo $arResult["NAME"] ?></b></p><br/>
-    <?php else: ?>
-        <b><?php echo $arResult["NAME"] ?></b><br/>
-    <?php endif; ?>
-<?php endif; ?>
-<?php if ($arParams["DISPLAY_PREVIEW_TEXT"] != "N" && $arResult["PREVIEW_TEXT"]): ?>
-    <?php echo $arResult["PREVIEW_TEXT"]; ?>
-<?php endif; ?>
-<?php if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["PREVIEW_PICTURE"])): ?>
-    <div style="clear:both"></div>
-<?php endif ?>
+
+<div class="sale-item" id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
+
+  <div class="sale-name" ><?=($arResult["FIELDS"]['NAME'])?></div>
 <?php foreach ($arResult["FIELDS"] as $code => $value): ?>
-    <small>
-        111 <?=$code?> <?= GetMessage("IBLOCK_FIELD_" . $code) ?>:&nbsp;<?= $value; ?>
-    </small><br/>
+<? if ($code!='NAME'):?>
+    <p class="<?=$code?>"> <?= $value; ?></p><br/>
+<?php endif ?>
 <?php endforeach; ?>
 <?php foreach ($VALUES as $ind => $val):?>
     <? switch ($ind){

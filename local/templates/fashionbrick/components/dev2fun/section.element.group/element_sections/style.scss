@@ -52,15 +52,19 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease-out;
-  ul{
+  .m-l-30{
     margin-left: 20px;
     padding: 10px 30px;
-  }
-  & .news-item{
-    border-radius: 6px;
-    margin: 5px 0;
-    background-color: rgba(63, 69, 211, 0.05);
-    padding: 10px;
+    font-size: 18px;
+    .sale-item{
+      border-radius: 6px;
+      margin: 5px 0;
+      background-color: rgba(63, 69, 211, 0.05);
+      padding: 10px;
+      .sale-name{
+        font-weight: 700;
+      }
+    }
   }
 
 }
