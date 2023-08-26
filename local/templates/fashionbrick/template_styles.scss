@@ -28,6 +28,7 @@ body {
     font-weight: 400;
   }
 
+  h1,
   h2 {
     font-size: 48px;
     font-style: normal;
@@ -339,7 +340,10 @@ div.news-list img.preview_picture {
     width: 620px;
   }
 }
-
+.main-sections-title{
+  text-align: center;
+  margin-bottom: 80px;
+}
 
 .footer {
   //position: absolute;
@@ -423,8 +427,113 @@ div.news-list img.preview_picture {
 }
 
 .slider__test {
-  //height: calc(100vh - 152px);
   .slider {
     height: calc(100vh - 152px);
   }
+}
+.map{
+  text-align: center;
+  margin-bottom: 80px;
+}
+.contacts{
+  margin-bottom: 80px;
+}
+.contacts__title{
+  font-size: 48px;
+  font-weight: 200;
+  margin-bottom: 60px;
+}
+.m-l-30 {
+  font-size: 18px;
+
+}
+
+.subSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(63, 69, 211, .1);
+  border-radius: 6px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  & .fa-chevron-down {
+    transition: transform 0.3s ease-in-out;
+  }
+  &.active .fa-chevron-down{
+    transform: rotate(180deg);
+
+  }
+
+  .subSection__inner {
+    display: flex;
+
+    .subSection__title{
+      display: flex;
+      flex-wrap: nowrap;
+      column-gap: 10px;
+      h2 {
+        font-size: 24px;
+        i{
+          margin-right: 5px;
+          color: gray;
+        }
+      }
+      .subSection__count{
+        font-size: 0.8rem;
+        margin: auto 0;
+        font-weight: 200;
+      }
+    }
+  }
+
+}
+
+.subSection__items {
+  font-size: 22px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+  .m-l-30{
+    margin-left: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+
+  }
+}
+.sale-item{
+  border-radius: 6px;
+  margin: 5px 0;
+  background-color: rgba(63, 69, 211, 0.05);
+  padding: 10px;
+
+
+
+  a{
+    color: var(--c4);
+    font-weight: 200;
+  }
+
+  div{
+    margin-bottom: 5px;
+  }
+}
+.ATT_adress {
+  display: flex;
+  column-gap: 10px;
+}
+.ATT_Phone {
+  a + a {
+    margin-left: 15px;
+  }
+}
+.sale-name{
+  font-weight: 700;
+  margin-bottom: 10px;
+  color:var(--c6);
+}
+.sale-item i{
+  color: var(--c6);
+  margin-right: ;: 10px;
 }

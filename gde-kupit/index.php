@@ -1,201 +1,118 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Где купить");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"_akkordeon",
-	Array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "N",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CHECK_DATES" => "Y",
-		"COMPONENT_TEMPLATE" => ".default",
-		"DETAIL_URL" => "",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(0=>"NAME",1=>"PREVIEW_TEXT",2=>"DETAIL_TEXT",3=>"",),
-		"FILTER_NAME" => "",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "9",
-		"IBLOCK_TYPE" => "content",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "20",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Точки продаж",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0=>"ATT_email",1=>"ATT_adress",2=>"ATT_REGION",3=>"ATT_site",4=>"ATT_Phone",5=>"",),
-		"SET_BROWSER_TITLE" => "N",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "N",
-		"SET_META_KEYWORDS" => "N",
-		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "N",
-		"SHOW_404" => "N",
-		"SORT_BY1" => "[ATT_REGION]",
-		"SORT_BY2" => "ACTIVE_FROM",
-		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N"
-	)
-);?><br>
- <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list",
-	"akk",
-	Array(
-		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
-		"ADD_SECTIONS_CHAIN" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"COMPONENT_TEMPLATE" => "akk",
-		"COUNT_ELEMENTS" => "N",
-		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
-		"FILTER_NAME" => "sectionsFilter",
-		"HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
-		"IBLOCK_ID" => "9",
-		"IBLOCK_TYPE" => "content",
-		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(0=>"NAME",1=>"",),
-		"SECTION_ID" => $_REQUEST["SECTION_ID"],
-		"SECTION_URL" => "#SECTION_CODE#",
-		"SECTION_USER_FIELDS" => array(0=>"",1=>"",),
-		"SHOW_PARENT_NAME" => "N",
-		"TOP_DEPTH" => "2",
-		"VIEW_MODE" => "LIST"
-	)
-);?><br>
- <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section", 
-	".default", 
+?>
+
+<h2 class="main-sections-title">КАРТА ТОЧЕК ПРОДАЖ</h2>
+<div class="map">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab96d2c8abf7383280ba73e6cb4cc34529fbdaf922aced373a534e277dac32bd6&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
+</div>
+
+
+
+<div class="contacts">
+    <div class="contacts__title main-sections-title">Контакты</div>
+<?$APPLICATION->IncludeComponent(
+	"dev2fun:section.element.group", 
+	"element_sections", 
 	array(
-		"ACTION_VARIABLE" => "action",
-		"ADD_PROPERTIES_TO_BASKET" => "Y",
-		"ADD_SECTIONS_CHAIN" => "N",
-		"ADD_TO_BASKET_ACTION" => "ADD",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"BACKGROUND_IMAGE" => "-",
-		"BASKET_URL" => "/personal/basket.php",
-		"BROWSER_TITLE" => "-",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"COMPATIBLE_MODE" => "N",
-		"CONVERT_CURRENCY" => "N",
-		"DETAIL_URL" => "",
-		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"DISPLAY_COMPARE" => "N",
-		"DISPLAY_TOP_PAGER" => "N",
-		"ELEMENT_SORT_FIELD" => "sort",
-		"ELEMENT_SORT_FIELD2" => "id",
-		"ELEMENT_SORT_ORDER" => "asc",
-		"ELEMENT_SORT_ORDER2" => "desc",
-		"ENLARGE_PRODUCT" => "STRICT",
-		"FILTER_NAME" => "arrFilter",
-		"HIDE_NOT_AVAILABLE" => "N",
-		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
-		"IBLOCK_ID" => "9",
+		"COMPONENT_TEMPLATE" => "element_sections",
 		"IBLOCK_TYPE" => "content",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"LAZY_LOAD" => "N",
-		"LINE_ELEMENT_COUNT" => "3",
-		"LOAD_ON_SCROLL" => "N",
-		"MESSAGE_404" => "",
-		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
-		"MESS_BTN_BUY" => "Купить",
-		"MESS_BTN_DETAIL" => "Подробнее",
-		"MESS_BTN_LAZY_LOAD" => "Показать ещё",
-		"MESS_BTN_SUBSCRIBE" => "Подписаться",
-		"MESS_NOT_AVAILABLE" => "Нет в наличии",
-		"MESS_NOT_AVAILABLE_SERVICE" => "Недоступно",
-		"META_DESCRIPTION" => "-",
-		"META_KEYWORDS" => "-",
-		"OFFERS_LIMIT" => "5",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Товары",
-		"PAGE_ELEMENT_COUNT" => "18",
-		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => array(
+		"IBLOCK_ID" => "9",
+		"SECTION_DEPTH" => "1",
+		"SECTION_COUNT" => "",
+		"SECTION_SORT_BY1" => "NAME",
+		"SECTION_SORT_ORDER1" => "DESC",
+		"SECTION_SORT_BY2" => "SORT",
+		"SECTION_SORT_ORDER2" => "ASC",
+		"SECTION_FILTER_NAME" => "",
+		"SECTION_PROPERTY_CODE" => array(
+			0 => "NAME",
+			1 => "",
 		),
-		"PRICE_VAT_INCLUDE" => "Y",
-		"PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-		"PRODUCT_ID_VARIABLE" => "id",
-		"PRODUCT_PROPS_VARIABLE" => "prop",
-		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
-		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
-		"PRODUCT_SUBSCRIPTION" => "Y",
-		"RCM_PROD_ID" => $_REQUEST["PRODUCT_ID"],
-		"RCM_TYPE" => "personal",
-		"SECTION_CODE" => "",
-		"SECTION_ID" => $_REQUEST["SECTION_ID"],
-		"SECTION_ID_VARIABLE" => "SECTION_ID",
-		"SECTION_URL" => "",
-		"SECTION_USER_FIELDS" => array(
+		"SECTION_DETAIL_URL" => "",
+		"SECTION_CHECK_EMPTY" => "N",
+		"SECTION_CNT_ELEMENTS" => "Y",
+		"SECTION_CHILD" => "Y",
+		"DISPLAY_SECTION_PICTURE" => "Y",
+		"PARENT_SECTION" => array(
+		),
+		"PARENT_SECTION_CODE" => array(
+		),
+		"SECTION_PREVIEW_TRUNCATE_LEN" => "",
+		"NEWS_SHOW_SECTION" => "Y",
+		"NEWS_COUNT" => "40",
+		"SORT_BY1" => "ID",
+		"SORT_ORDER1" => "ASC",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER2" => "ASC",
+		"FILTER_NAME" => "",
+		"FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "PREVIEW_TEXT",
+			2 => "DETAIL_TEXT",
+			3 => "",
+		),
+		"PROPERTY_CODE" => array(
 			0 => "",
 			1 => "",
 		),
-		"SEF_MODE" => "N",
-		"SET_BROWSER_TITLE" => "Y",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "Y",
-		"SET_META_KEYWORDS" => "Y",
-		"SET_STATUS_404" => "N",
+		"CHECK_DATES" => "Y",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"TEMP_OUTPUT_SECTIONS" => "subSection.php",
+		"TEMP_OUTPUT_ELEMETS" => "element.php",
+		"DETAIL_URL" => "",
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_JUMP" => "Y",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"SET_TITLE" => "Y",
-		"SHOW_404" => "N",
-		"SHOW_ALL_WO_SECTION" => "N",
-		"SHOW_CLOSE_POPUP" => "N",
-		"SHOW_DISCOUNT_PERCENT" => "N",
-		"SHOW_FROM_SECTION" => "N",
-		"SHOW_MAX_QUANTITY" => "N",
-		"SHOW_OLD_PRICE" => "N",
-		"SHOW_PRICE_COUNT" => "1",
-		"SHOW_SLIDER" => "Y",
-		"TEMPLATE_THEME" => "blue",
-		"USE_ENHANCED_ECOMMERCE" => "N",
-		"USE_MAIN_ELEMENT_SECTION" => "N",
-		"USE_PRICE_COUNT" => "N",
-		"USE_PRODUCT_QUANTITY" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
-		"CUSTOM_FILTER" => "",
-		"PROPERTY_CODE_MOBILE" => array(
-		),
-		"SLIDER_INTERVAL" => "3000",
-		"SLIDER_PROGRESS" => "N",
-		"ADD_PICT_PROP" => "-",
-		"LABEL_PROP" => array(
-		)
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_STATUS_404" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "Y",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"PAGER_TEMPLATE" => ".default",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"PAGER_TITLE" => "Новости",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N"
 	),
 	false
-);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+</div>
+    <script>
+        $(document).ready(function () {
+            let acc = document.getElementsByClassName("subSection");
+            let i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        });
+    </script>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

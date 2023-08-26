@@ -65,11 +65,12 @@ while ($ob = $res->GetNext()) {
             break;
         default:?>
                 <div class="<?=$ind;?>">
-                <?=($VALUES[$ind][0].': ');
+                <div class="<?=$ind;?>__title"> <?=($VALUES[$ind][0].': ');?></div>
+                <div>    <?
                 for ($i = 1; $i <= count($val);$i+=2) {
                     echo($VALUES[$ind][$i]);
-                    if (count($val)>2) echo('; ');
-                }?>
+                    if (count($val)>2) echo('<br> ');
+                }?></div>
                 </div>
 
 

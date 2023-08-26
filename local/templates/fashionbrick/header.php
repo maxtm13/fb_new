@@ -299,7 +299,7 @@ if ($CurDir === '/' && (!str_starts_with($CurUri, '/test.php'))) { ?>
                 ),
                 false
             ); ?>
-            <h1><? $APPLICATION->ShowTitle(false); ?></h1>
+            <h1 class="main-sections-title"><? $APPLICATION->ShowTitle(false); ?></h1>
 <? } ?>
 
 
