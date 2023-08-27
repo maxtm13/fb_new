@@ -20,7 +20,7 @@ $APPLICATION->SetTitle("Где купить");
 		"IBLOCK_TYPE" => "content",
 		"IBLOCK_ID" => "9",
 		"SECTION_DEPTH" => "1",
-		"SECTION_COUNT" => "",
+		"SECTION_COUNT" => "60",
 		"SECTION_SORT_BY1" => "NAME",
 		"SECTION_SORT_ORDER1" => "DESC",
 		"SECTION_SORT_BY2" => "SORT",

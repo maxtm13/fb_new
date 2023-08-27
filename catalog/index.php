@@ -246,6 +246,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 		"SIDEBAR_DETAIL_POSITION" => "right",
 		"DETAIL_MAIN_BLOCK_OFFERS_PROPERTY_CODE" => array(
 			0 => "ATT_COLOR_PR",
+			1 => "ATT_SURFACE",
 		),
 		"OFFER_TREE_PROPS" => "",
 		"DETAIL_SHOW_MAX_QUANTITY" => "N",
@@ -262,6 +263,11 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 		"FILE_404" => "",
 		"SECTIONS_HIDE_SECTION_NAME" => "N",
 		"DETAIL_VOTE_DISPLAY_AS_RATING" => "rating",
+		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => array(
+			0 => "ATT_SIZE",
+			1 => "ATT_WEIGTH",
+			2 => "ATT_KOLVO",
+		),
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE_PATH#/",

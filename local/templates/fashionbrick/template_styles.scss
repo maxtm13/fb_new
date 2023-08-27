@@ -40,7 +40,10 @@ body {
 .full-width {
   max-width: 100%;
 }
+.bx-breadcrumb{
+  padding: 10px 0 0 20px;
 
+}
 .header {
   font-size: 11px;
   background-color: var(--c1);
@@ -156,7 +159,7 @@ body {
 .slider__main {
   background-color: #d9d9d9;
   .slick-dotted.slick-slider {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -443,6 +446,8 @@ div.news-list img.preview_picture {
   font-weight: 200;
   margin-bottom: 60px;
 }
+
+//===============
 .m-l-30 {
   font-size: 18px;
 
@@ -535,5 +540,49 @@ div.news-list img.preview_picture {
 }
 .sale-item i{
   color: var(--c6);
-  margin-right: ;: 10px;
+  margin-right: 10px;
+}
+.galery-items, .items{
+  //display: flex;
+  //flex-wrap: wrap;
+  //gap: 20px;
+  //justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 358px);
+  gap: 20px;
+
+}
+.galery-foto-item{
+  //width: 358px;
+  height: 358px;
+  position: relative;
+  //background-color: #3c763d;
+  .preview_picture{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1);
+    transition: filter 0.3s ease-in-out;
+  }
+
+  .preview_picture:hover{
+    filter: brightness(0.55);
+
+  }
+}
+.img-after{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: opacity .5s, top .5s;
+  pointer-events: none;
+
+}
+.galery-foto-item:hover .img-after{
+  opacity: 0.77;
+  top: 50%;
+}
+.look{
+  fill: var(--c5);
 }

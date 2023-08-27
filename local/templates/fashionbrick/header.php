@@ -197,7 +197,7 @@ $CurUri = $APPLICATION->GetCurUri();
 	),
 	false
 );
-                    ?>
+                    echo $CurUri; ?>
                 </div>
 
         </div>
@@ -207,7 +207,7 @@ $CurUri = $APPLICATION->GetCurUri();
 
 <?
 
-if ($CurDir === '/' && (!str_starts_with($CurUri, '/test.php'))) { ?>
+if ($CurUri === '/') { ?>
     <section class="slider__main">
         <div class="slider__main-inner">
                     <? // Сладер на главной
@@ -289,16 +289,16 @@ if ($CurDir === '/' && (!str_starts_with($CurUri, '/test.php'))) { ?>
         <div class="container">
             <? // Навигационная цепочка - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/breadcrumb.php
             $APPLICATION->IncludeComponent(
-                "bitrix:breadcrumb",
-                ".default",
-                array(
-                    "START_FROM" => "0",
-                    "PATH" => "",
-                    "SITE_ID" => "s1",
-                    "COMPONENT_TEMPLATE" => ".default"
-                ),
-                false
-            ); ?>
+	"bitrix:breadcrumb", 
+	"universal", 
+	array(
+		"START_FROM" => "0",
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"COMPONENT_TEMPLATE" => "universal"
+	),
+	false
+); ?>
             <h1 class="main-sections-title"><? $APPLICATION->ShowTitle(false); ?></h1>
 <? } ?>
 

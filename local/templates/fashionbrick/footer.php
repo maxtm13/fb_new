@@ -21,16 +21,20 @@
                     ); ?>
                 </div>
                 <div class="footer__item-content adress">
-                    <? $APPLICATION->IncludeComponent(
-                        "bitrix:main.include",
-                        "",
-                        array(
-                            "AREA_FILE_SHOW" => "file",
-                            "AREA_FILE_SUFFIX" => "inc",
-                            "EDIT_TEMPLATE" => "",
-                            "PATH" => "/adress.php"
-                        )
-                    ); ?>
+                    <div class="contact__adress">
+                        <i class="fa-solid fa-location-dot"></i>
+                            <? $APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/adress.php"
+                                )
+                            ); ?>
+                    </div>
+
                     <? $APPLICATION->IncludeComponent(
                         "bitrix:main.include",
                         "",
