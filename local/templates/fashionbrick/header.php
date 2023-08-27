@@ -196,8 +196,7 @@ $CurUri = $APPLICATION->GetCurUri();
 		"MAX_IMAGE_SIZE" => "70"
 	),
 	false
-);
-                    echo $CurUri; ?>
+);?>
                 </div>
 
         </div>
