@@ -1,7 +1,7 @@
 <?
-$MESS["nav_prev"]="<<";
+$MESS["nav_prev"]="Пред.";
 $MESS["nav_paged"]="По стр.";
-$MESS["pages"]="";
-$MESS["nav_next"]=">>";
+$MESS["pages"]="Страницы:";
+$MESS["nav_next"]="След.";
 $MESS["nav_all"]="Все";
 ?>
