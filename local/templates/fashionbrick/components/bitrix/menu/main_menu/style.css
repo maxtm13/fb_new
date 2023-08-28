@@ -98,7 +98,9 @@
 	position:absolute;
 	/*top:-999em;*/
 	top:auto;
-	display:none;
+	/*display:none;*/
+	opacity: 0;
+	transition: opacity 0.5s;
 	z-index:500;
 
 	height:auto;
@@ -123,6 +125,7 @@
 #horizontal-multilevel-menu li ul a
 {
 	text-align:left;
+	transition: color 0.3ms;
 }
 
 /*Items text color & size */
@@ -140,6 +143,7 @@
 {
 	color:var(--c1);
 	font-weight:400;
+	transition: color 0.3s;
 }
 
 /*Items text color & size: hover*/
@@ -173,7 +177,9 @@
 #horizontal-multilevel-menu li.jshover ul ul ul ul ul
 {
 	/*top:-999em;*/
-	display:none;
+	/*display:none;*/
+	opacity: 0;
+	transition: opacity 0.5s;
 }
 
 #horizontal-multilevel-menu li:hover ul,
@@ -189,7 +195,8 @@
 {
 	/*z-index:1000;
 	top:auto;*/
-	display:block;
+	/*display:block;*/
+	opacity: 1;
 }
 
 div.menu-clear-left
