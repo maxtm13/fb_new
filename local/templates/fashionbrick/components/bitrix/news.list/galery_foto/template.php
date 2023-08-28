@@ -24,7 +24,7 @@ $this->setFrameMode(true);
         ?>
 
         <div class="galery-foto-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-            <a href="<?= $arItem['DETAIL_PICTURE']['SRC'] ?>" class="link_img_detail">
+            <a href="<?= $arItem['DETAIL_PICTURE']['SRC'] ?>" data-fancybox="gallery" class="link_img_detail">
                 <img
                         class="preview_picture"
                         border="0"

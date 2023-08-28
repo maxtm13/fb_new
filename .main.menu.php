@@ -2,49 +2,42 @@
 $aMenuLinks = Array(
 	Array(
 		"Главная", 
-		"/", 
+		SITE_DIR."/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Каталог", 
-		"/catalog/", 
+		SITE_DIR."/catalog/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Галерея", 
-		"/galery/", 
+		SITE_DIR."/galery/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Информация", 
-		"/info/", 
+		SITE_DIR."/info/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Где купить", 
-		"/gde-kupit/", 
+		SITE_DIR."/gde-kupit/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Новости", 
-		"/news/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Персональный раздел", 
-		"/personal/", 
+		SITE_DIR."/news/", 
 		Array(), 
 		Array(), 
 		"" 

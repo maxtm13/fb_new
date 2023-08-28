@@ -19,6 +19,12 @@ $CurUri = $APPLICATION->GetCurUri();
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/slick/slick-theme.min.css');
     //    use Bitrix\Main\UI\Extension;
     //
+
+    //    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    //<link
+    //  rel="stylesheet"
+    //  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    ///>
     //    Extension::load('ui.bootstrap4');
     // JS
     CJSCore::Init(array("jquery3"));
@@ -26,6 +32,7 @@ $CurUri = $APPLICATION->GetCurUri();
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/css/slick/slick.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/fancy/jquery.fancybox.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/myscripts.min.js');
+    //Asset::getInstance()->addJs('https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js');
     // HEADERS
     $APPLICATION->ShowHead();
     ?>
@@ -155,61 +162,152 @@ $CurUri = $APPLICATION->GetCurUri();
                 false
             ); ?>
         </div>
-        <div class="cart">
+        <div class="personal_inner">
+            <div class="user_profile">
+                <a class="user_profile-lnk" title="Личный кабинет" href="/personal/">
+                    <i class="img-user">
+                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.1318 10.9743C16.1831 11.9553 14.9036 12.5 13.5769 12.5C12.2502 12.5 10.9708 11.9553 10.0221 10.9743C9.07225 9.99207 8.53297 8.653 8.53297 7.25C8.53297 5.847 9.07225 4.50793 10.0221 3.52574C10.9708 2.54469 12.2502 2 13.5769 2C14.9036 2 16.1831 2.54469 17.1318 3.52574C18.0816 4.50793 18.6209 5.847 18.6209 7.25C18.6209 8.653 18.0816 9.99207 17.1318 10.9743ZM4 24.5498C4 20.2607 7.35165 16.8438 11.419 16.8438H15.7348C19.8022 16.8438 23.1538 20.2607 23.1538 24.5498C23.1538 24.8302 22.9422 25 22.7515 25H4.40239C4.21162 25 4 24.8302 4 24.5498Z"
+                                  stroke="#F5F5F5" stroke-width="2"/>
+                        </svg>
+                    </i>
+                    <span class="text">ЛК</span>
+                </a>
+            </div>
+            <div class="cart">
 
-<!--                <div class="img-cart">-->
-<!--                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="26" viewBox="0 0 23 26" stroke="#f5f5f5"-->
-<!--                         fill="none">-->
-<!--                        <path d="M2.02421 9.01692C2.07258 8.415 2.57517 7.95117 3.17904 7.95117H19.2878C19.8917 7.95117 20.3943 8.415 20.4426 9.01692L21.4592 21.6681C21.5676 23.0167 20.5025 24.1708 19.1495 24.1708H3.31724C1.96437 24.1708 0.899225 23.0167 1.0076 21.6681L2.02421 9.01692Z"-->
-<!--                              stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>-->
-<!--                        <path d="M15.8675 11.4269V5.63419C15.8675 3.0748 13.7927 1 11.2333 1C8.67392 1 6.59912 3.0748 6.59912 5.63419V11.4269"-->
-<!--                              stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>-->
-<!--                    </svg>-->
-<!--                </div>-->
                 <div class="cart_title cart-link">
                     <? // Ссылка на корзину
                     $APPLICATION->IncludeComponent(
-	"bitrix:sale.basket.basket.line", 
-	"top_menu_basket", 
-	array(
-		"COMPONENT_TEMPLATE" => "top_menu_basket",
-		"PATH_TO_BASKET" => "/personal/cart/",
-		"PATH_TO_ORDER" => "personal/order_make/",
-		"SHOW_NUM_PRODUCTS" => "Y",
-		"SHOW_TOTAL_PRICE" => "N",
-		"SHOW_EMPTY_VALUES" => "Y",
-		"SHOW_PERSONAL_LINK" => "N",
-		"PATH_TO_PERSONAL" => SITE_DIR."personal/",
-		"SHOW_AUTHOR" => "N",
-		"PATH_TO_AUTHORIZE" => "",
-		"SHOW_REGISTRATION" => "N",
-		"PATH_TO_REGISTER" => SITE_DIR."login/",
-		"PATH_TO_PROFILE" => SITE_DIR."personal/",
-		"SHOW_PRODUCTS" => "N",
-		"SHOW_DELAY" => "N",
-		"SHOW_NOTAVAIL" => "N",
-		"SHOW_IMAGE" => "Y",
-		"SHOW_PRICE" => "Y",
-		"SHOW_SUMMARY" => "Y",
-		"POSITION_FIXED" => "N",
-		"HIDE_ON_BASKET_PAGES" => "N",
-		"MAX_IMAGE_SIZE" => "70"
-	),
-	false
-);?>
-                </div>
-
+                        "bitrix:sale.basket.basket.line",
+                        "top_menu_basket",
+                        array(
+                            "COMPONENT_TEMPLATE" => "top_menu_basket",
+                            "PATH_TO_BASKET" => "/personal/cart/",
+                            "PATH_TO_ORDER" => "personal/order_make/",
+                            "SHOW_NUM_PRODUCTS" => "Y",
+                            "SHOW_TOTAL_PRICE" => "N",
+                            "SHOW_EMPTY_VALUES" => "Y",
+                            "SHOW_PERSONAL_LINK" => "N",
+                            "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
+                            "SHOW_AUTHOR" => "N",
+                            "PATH_TO_AUTHORIZE" => "",
+                            "SHOW_REGISTRATION" => "N",
+                            "PATH_TO_REGISTER" => SITE_DIR . "login/",
+                            "PATH_TO_PROFILE" => SITE_DIR . "personal/",
+                            "SHOW_PRODUCTS" => "N",
+                            "SHOW_DELAY" => "N",
+                            "SHOW_NOTAVAIL" => "N",
+                            "SHOW_IMAGE" => "Y",
+                            "SHOW_PRICE" => "Y",
+                            "SHOW_SUMMARY" => "Y",
+                            "POSITION_FIXED" => "N",
+                            "HIDE_ON_BASKET_PAGES" => "N",
+                            "MAX_IMAGE_SIZE" => "70"
+                        ),
+                        false
+                    ); ?>
+                </div> <!-- cart_title cart-link-->
+            </div>
         </div>
+    </div>
+
+
+    <div class="top_menu-wrapper--mobile ">
+        <div class="container">
+            <div class="top_menu-wrapper--mobile-wrapper">
+                <div class="logo">
+                    <a href="/">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/img/logo21.png" alt="logo" class="logo-img">
+                    </a>
+                </div>
+                <div class="burger-menu">
+                    <div class="burger-menu-icon"></div>
+                </div>
+            </div>
+        </div>
+        <!--        <div class="menu">-->
+        <!--            --><? // // Меню - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/menu.php
+        //            $APPLICATION->IncludeComponent(
+        //                "bitrix:menu",
+        //                "main_menu",
+        //                array(
+        //                    "ROOT_MENU_TYPE" => "main",
+        //                    "MENU_CACHE_TYPE" => "N",
+        //                    "MENU_CACHE_TIME" => "3600",
+        //                    "MENU_CACHE_USE_GROUPS" => "Y",
+        //                    "MENU_CACHE_GET_VARS" => array(),
+        //                    "MAX_LEVEL" => "3",
+        //                    "CHILD_MENU_TYPE" => "section",
+        //                    "USE_EXT" => "N",
+        //                    "DELAY" => "N",
+        //                    "ALLOW_MULTI_SELECT" => "N",
+        //                    "COMPONENT_TEMPLATE" => "main_menu"
+        //                ),
+        //                false
+        //            ); ?>
+        <!--        </div>-->
+        <!--        <div class="personal_inner">-->
+        <!--            <div class="user_profile">-->
+        <!--                <a class="user_profile-lnk" title="Личный кабинет" href="/personal/">-->
+        <!--                    <i class="img-user">-->
+        <!--                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+        <!--                            <path d="M17.1318 10.9743C16.1831 11.9553 14.9036 12.5 13.5769 12.5C12.2502 12.5 10.9708 11.9553 10.0221 10.9743C9.07225 9.99207 8.53297 8.653 8.53297 7.25C8.53297 5.847 9.07225 4.50793 10.0221 3.52574C10.9708 2.54469 12.2502 2 13.5769 2C14.9036 2 16.1831 2.54469 17.1318 3.52574C18.0816 4.50793 18.6209 5.847 18.6209 7.25C18.6209 8.653 18.0816 9.99207 17.1318 10.9743ZM4 24.5498C4 20.2607 7.35165 16.8438 11.419 16.8438H15.7348C19.8022 16.8438 23.1538 20.2607 23.1538 24.5498C23.1538 24.8302 22.9422 25 22.7515 25H4.40239C4.21162 25 4 24.8302 4 24.5498Z"-->
+        <!--                                  stroke="#F5F5F5" stroke-width="2"/>-->
+        <!--                        </svg>-->
+        <!--                    </i>-->
+        <!---->
+        <!--                    <p class="text">ЛК</p>-->
+        <!---->
+        <!--                   -->
+        <!--                </a>-->
+        <!--            </div>-->
+        <!--            <div class="cart">-->
+        <!---->
+        <!--                <div class="cart_title cart-link">-->
+        <!--                    --><? // // Ссылка на корзину
+        ////                    $APPLICATION->IncludeComponent(
+        ////                        "bitrix:sale.basket.basket.line",
+        ////                        "top_menu_basket",
+        ////                        array(
+        ////                            "COMPONENT_TEMPLATE" => "top_menu_basket",
+        ////                            "PATH_TO_BASKET" => "/personal/cart/",
+        ////                            "PATH_TO_ORDER" => "personal/order_make/",
+        ////                            "SHOW_NUM_PRODUCTS" => "Y",
+        ////                            "SHOW_TOTAL_PRICE" => "N",
+        ////                            "SHOW_EMPTY_VALUES" => "Y",
+        ////                            "SHOW_PERSONAL_LINK" => "N",
+        ////                            "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
+        ////                            "SHOW_AUTHOR" => "N",
+        ////                            "PATH_TO_AUTHORIZE" => "",
+        ////                            "SHOW_REGISTRATION" => "N",
+        ////                            "PATH_TO_REGISTER" => SITE_DIR . "login/",
+        ////                            "PATH_TO_PROFILE" => SITE_DIR . "personal/",
+        ////                            "SHOW_PRODUCTS" => "N",
+        ////                            "SHOW_DELAY" => "N",
+        ////                            "SHOW_NOTAVAIL" => "N",
+        ////                            "SHOW_IMAGE" => "Y",
+        ////                            "SHOW_PRICE" => "Y",
+        ////                            "SHOW_SUMMARY" => "Y",
+        ////                            "POSITION_FIXED" => "N",
+        ////                            "HIDE_ON_BASKET_PAGES" => "N",
+        ////                            "MAX_IMAGE_SIZE" => "70"
+        ////                        ),
+        ////                        false
+        ////                    ); ?>
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </div>
 
 </nav>
 
 <?
 
-if ($CurUri === '/') { ?>
+if ($CurDir === '/') { ?>
     <section class="slider__main">
         <div class="slider__main-inner">
-                    <? // Сладер на главной
+            <? // Сладер на главной
             $APPLICATION->IncludeComponent(
                 "bitrix:news.list",
                 "slider",
@@ -284,21 +382,21 @@ if ($CurUri === '/') { ?>
         </div>
     </section>
 <? } else { ?>
-    <div class="margin_top"></div>
-        <div class="container">
-            <? // Навигационная цепочка - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/breadcrumb.php
-            $APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	"universal", 
-	array(
-		"START_FROM" => "0",
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"COMPONENT_TEMPLATE" => "universal"
-	),
-	false
-); ?>
-            <h1 class="main-sections-title"><? $APPLICATION->ShowTitle(false); ?></h1>
-<? } ?>
+<div class="margin_top"></div>
+<div class="container">
+    <? // Навигационная цепочка - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/breadcrumb.php
+    $APPLICATION->IncludeComponent(
+        "bitrix:breadcrumb",
+        "universal",
+        array(
+            "START_FROM" => "0",
+            "PATH" => "",
+            "SITE_ID" => "s1",
+            "COMPONENT_TEMPLATE" => "universal"
+        ),
+        false
+    ); ?>
+    <h1 class="main-sections-title"><? $APPLICATION->ShowTitle(false); ?></h1>
+    <? } ?>
 
 

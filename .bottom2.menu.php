@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Галерея", 
-		"/galery/", 
+		"",
 		Array(), 
 		Array(), 
 		"" 
