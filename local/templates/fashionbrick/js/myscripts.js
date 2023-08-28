@@ -19,7 +19,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3000,
         //fade:true,
         // cssEase:'ease',
