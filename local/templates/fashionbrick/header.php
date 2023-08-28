@@ -51,6 +51,7 @@ $CurUri = $APPLICATION->GetCurUri();
     <link rel="icon" type="image/png" sizes="96x96" href="/local/ico/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/local/ico/favicon-16x16.png">
     <link rel="manifest" href="/local/ico/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/local/ico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -226,78 +227,6 @@ $CurUri = $APPLICATION->GetCurUri();
                 </div>
             </div>
         </div>
-        <!--        <div class="menu">-->
-        <!--            --><? // // Меню - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/menu.php
-        //            $APPLICATION->IncludeComponent(
-        //                "bitrix:menu",
-        //                "main_menu",
-        //                array(
-        //                    "ROOT_MENU_TYPE" => "main",
-        //                    "MENU_CACHE_TYPE" => "N",
-        //                    "MENU_CACHE_TIME" => "3600",
-        //                    "MENU_CACHE_USE_GROUPS" => "Y",
-        //                    "MENU_CACHE_GET_VARS" => array(),
-        //                    "MAX_LEVEL" => "3",
-        //                    "CHILD_MENU_TYPE" => "section",
-        //                    "USE_EXT" => "N",
-        //                    "DELAY" => "N",
-        //                    "ALLOW_MULTI_SELECT" => "N",
-        //                    "COMPONENT_TEMPLATE" => "main_menu"
-        //                ),
-        //                false
-        //            ); ?>
-        <!--        </div>-->
-        <!--        <div class="personal_inner">-->
-        <!--            <div class="user_profile">-->
-        <!--                <a class="user_profile-lnk" title="Личный кабинет" href="/personal/">-->
-        <!--                    <i class="img-user">-->
-        <!--                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-        <!--                            <path d="M17.1318 10.9743C16.1831 11.9553 14.9036 12.5 13.5769 12.5C12.2502 12.5 10.9708 11.9553 10.0221 10.9743C9.07225 9.99207 8.53297 8.653 8.53297 7.25C8.53297 5.847 9.07225 4.50793 10.0221 3.52574C10.9708 2.54469 12.2502 2 13.5769 2C14.9036 2 16.1831 2.54469 17.1318 3.52574C18.0816 4.50793 18.6209 5.847 18.6209 7.25C18.6209 8.653 18.0816 9.99207 17.1318 10.9743ZM4 24.5498C4 20.2607 7.35165 16.8438 11.419 16.8438H15.7348C19.8022 16.8438 23.1538 20.2607 23.1538 24.5498C23.1538 24.8302 22.9422 25 22.7515 25H4.40239C4.21162 25 4 24.8302 4 24.5498Z"-->
-        <!--                                  stroke="#F5F5F5" stroke-width="2"/>-->
-        <!--                        </svg>-->
-        <!--                    </i>-->
-        <!---->
-        <!--                    <p class="text">ЛК</p>-->
-        <!---->
-        <!--                   -->
-        <!--                </a>-->
-        <!--            </div>-->
-        <!--            <div class="cart">-->
-        <!---->
-        <!--                <div class="cart_title cart-link">-->
-        <!--                    --><? // // Ссылка на корзину
-        ////                    $APPLICATION->IncludeComponent(
-        ////                        "bitrix:sale.basket.basket.line",
-        ////                        "top_menu_basket",
-        ////                        array(
-        ////                            "COMPONENT_TEMPLATE" => "top_menu_basket",
-        ////                            "PATH_TO_BASKET" => "/personal/cart/",
-        ////                            "PATH_TO_ORDER" => "personal/order_make/",
-        ////                            "SHOW_NUM_PRODUCTS" => "Y",
-        ////                            "SHOW_TOTAL_PRICE" => "N",
-        ////                            "SHOW_EMPTY_VALUES" => "Y",
-        ////                            "SHOW_PERSONAL_LINK" => "N",
-        ////                            "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
-        ////                            "SHOW_AUTHOR" => "N",
-        ////                            "PATH_TO_AUTHORIZE" => "",
-        ////                            "SHOW_REGISTRATION" => "N",
-        ////                            "PATH_TO_REGISTER" => SITE_DIR . "login/",
-        ////                            "PATH_TO_PROFILE" => SITE_DIR . "personal/",
-        ////                            "SHOW_PRODUCTS" => "N",
-        ////                            "SHOW_DELAY" => "N",
-        ////                            "SHOW_NOTAVAIL" => "N",
-        ////                            "SHOW_IMAGE" => "Y",
-        ////                            "SHOW_PRICE" => "Y",
-        ////                            "SHOW_SUMMARY" => "Y",
-        ////                            "POSITION_FIXED" => "N",
-        ////                            "HIDE_ON_BASKET_PAGES" => "N",
-        ////                            "MAX_IMAGE_SIZE" => "70"
-        ////                        ),
-        ////                        false
-        ////                    ); ?>
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
     </div>
 
 </nav>
