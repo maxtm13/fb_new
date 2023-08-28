@@ -10,17 +10,7 @@ $(document).ready(function () {
         //fade:true,
         // cssEase:'ease',
         pauseOnFocus: false,
-        pauseOnHover: false,
-    //     responsive: [
-    //         {
-    //             breakpoint: 768,
-    //             settings: {
-    //                 dots: false,
-    //                 arrows: false,
-    //
-    //             }
-    //         }
-    // ]
+        pauseOnHover: false
     });
     // Слайдер разделов каталога
     $('.bx_catalog_line_ul').slick({
@@ -29,7 +19,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         //fade:true,
         // cssEase:'ease',

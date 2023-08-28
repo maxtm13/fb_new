@@ -115,3 +115,4 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
             <!--    </a>-->
         </div>
     </a>
+</div>
