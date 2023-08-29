@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
 <section class="galery">
 <?php
-$APPLICATION->SetTitle("Фото домов из нашей продукции");
+$APPLICATION->SetTitle("Фото готовых объектов");
 ?>
 
 <!--<div class="items">-->
