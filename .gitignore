@@ -2,3 +2,5 @@
 /node_modules/
 /bitrix/
 /bitrix_core.zip
+/**/*.min.min.*
+/*.min.min.*

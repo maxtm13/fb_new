@@ -10,7 +10,17 @@ $(document).ready(function () {
         //fade:true,
         // cssEase:'ease',
         pauseOnFocus: false,
-        pauseOnHover: false
+        pauseOnHover: false,
+    //     responsive: [
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 dots: false,
+    //                 arrows: false,
+    //
+    //             }
+    //         }
+    // ]
     });
     // Слайдер разделов каталога
     $('.bx_catalog_line_ul').slick({
