@@ -816,12 +816,10 @@ div.news-list img.preview_picture {
 
 
 
-
 @media  ( max-width: 1200px){
   .catalog_main-sections ul li a .catalog__section-img{
-  width: 200px;
+    width: 200px;
     height: 200px;
-
   }
   .footer__items .footer__item-content{
     font-size: 16px;
@@ -909,6 +907,12 @@ div.news-list img.preview_picture {
   }
 
   }
+@media  ( max-width: 480px) {
+  .catalog_main-sections ul li{
+    max-width: 100%;
+
+  }
+}
 @media  ( max-width: 320px) {
   .header__items-contacts{
     flex-direction: column;
