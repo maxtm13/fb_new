@@ -760,6 +760,10 @@ div.news-list img.preview_picture {
   color: var(--c1);
   margin-right: 10px;
 }
+
+.galery{
+  margin: 60px 0;
+}
 .galery-items, .items{
   //display: flex;
   //flex-wrap: wrap;
@@ -767,10 +771,14 @@ div.news-list img.preview_picture {
   //justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(3, 358px);
+  justify-content: space-between;
   gap: 20px;
 
 }
 .galery-foto-item{
+
+
+
   //width: 358px;
   height: 358px;
   position: relative;
@@ -908,4 +916,5 @@ div.news-list img.preview_picture {
     align-items: center;
   }
 }
+
 
