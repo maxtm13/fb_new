@@ -306,10 +306,10 @@ $CurUri = $APPLICATION->GetCurUri();
         </div>
     </div>
 </nav>
-
+<?echo $CurUri;?>
 <?
 
-if ($CurDir === '/') { ?>
+if (($CurDir === '/') && (!str_contains($CurUri, '/test'))) { ?>
     <section class="slider__main">
         <div class="slider__main-inner">
             <? // Сладер на главной
