@@ -13,7 +13,9 @@
 
 CJSCore::Init(array("ajax"));
 ?>
-
+<pre>
+    <? //print_r(($arResult))?>
+</pre>
 <?php
 //Let's determine what value to display: rating or average ?
 if ($arParams['DISPLAY_AS_RATING'] === 'vote_avg')
