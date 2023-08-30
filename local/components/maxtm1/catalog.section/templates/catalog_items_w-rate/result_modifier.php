@@ -7,16 +7,48 @@
 
 $component = $this->getComponent();
 $arParams = $component->applyTemplateModifications();
+foreach ($arResult['ITEMS'] as $k => $item){
+    $idsitem[]=$item['ID'];
+    $res = CIBlockElement::GetProperty(4,$item['ID'],Array("sort"=>"asc"), Array('rating'));
+    while($ar_props = $res->Fetch()){
+        $znach[$item['ID']][$ar_props['CODE']] =$ar_props['VALUE'];
+        $arResult['ITEMS'][$k]['myrating']= $ar_props['VALUE'];
+
+    }
+
+};
+//$arSelect = Array("ID", "NAME", "DATE_ACTIVE_FROM");
+//$res = CIBlockElement::GetList(
+//        Array(),
+//        Array(
+//            1418,
+//            1410
+//        ),
+//        false,
+//        Array("nPageSize"=>50),
+//        array());
+//while($ob = $res->GetNextElement())
+//{
+//    $arFields[] = $ob->GetFields();
+//}
+
 ?>
 
-<pre>
-<? for($i=0; $i<count($arResult['ITEMS']);$i++)
-$arflt[]=($arResult['ITEMS'][$i]['ID']);
+
+<pre style="text-align: left">111
+
+<?//print_r($arResult['ITEMS'][0]);;?>
+<?//print_r($arResult['ITEMS']);;?>
+</pre>
+
+<?//выборка ID элементов
+// for($i=0; $i<count($arResult['ITEMS']);$i++)
+//    $arflt[]=($arResult['ITEMS'][$i]['ID']);
+//$GLOBALS['arrFilter'] = array('ID' => $arflt);
 //print_r($arflt);
-?>
+//?>
 
 <? //var_dump($arResult['ITEMS'][0])?>
-</pre>
 
 <?php
 //$APPLICATION->IncludeComponent(
