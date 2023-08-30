@@ -20,8 +20,16 @@ use Bitrix\Catalog\ProductTable;
  * |	<!-- items-container -->
  * |	<!-- pagination-container -->
  * |	<!-- component-end -->
- */
-
+ */?>
+<pre style="text-align: left">222
+                <? foreach ($arResult['ITEMS'] as $i) {
+                    print_r($i['ID']);
+                    echo ' ';
+                    print_r($i['myrating']);
+                        echo ('<br>************<br>');
+                }?>
+            </pre>
+<?php
 $this->setFrameMode(true);
 
 if (!empty($arResult['NAV_RESULT']))
@@ -654,7 +662,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 				unset($generalParams);
 			}
 			else
-			{
+			{?> <?
 				// load css for bigData/deferred load
 				$APPLICATION->IncludeComponent(
 					'bitrix:catalog.item',
@@ -664,7 +672,9 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 					array('HIDE_ICONS' => 'Y')
 				);
 			}
-			?>
+			?> <pre style="text-align: left">111
+                <?//print_r($arResult['NAV_RESULT']);?>
+            </pre>
 			<!-- items-container -->
 		</div>
 		<?
