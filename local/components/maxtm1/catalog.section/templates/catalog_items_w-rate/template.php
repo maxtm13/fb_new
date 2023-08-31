@@ -442,7 +442,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 									$item = end($rowItems);
 									$APPLICATION->IncludeComponent(
 										'bitrix:catalog.item',
-										'bootstrap_v4',
+										'store_v3',
 										array(
 											'RESULT' => array(
 												'ITEM' => $item,

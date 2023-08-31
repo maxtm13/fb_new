@@ -52,7 +52,7 @@ use \Bitrix\Main\Localization\Loc;
             ?>
 		</span>
 		<span class="product-item-image-original" id="<?= $itemIds['PICT'] ?>"
-              style=" background-image: url('<?= $item['PREVIEW_PICTURE']['SRC'] ?>'); <?= ($showSlider ? 'display: none;' : '') ?>"></span>
+              style="background-color:#D9D9D9; background-image: url('<?= $item['PREVIEW_PICTURE']['SRC'] ?>'); <?= ($showSlider ? 'display: none;' : '') ?>"></span>
 		<?
         if ($item['SECOND_PICT']) {
             $bgImage = !empty($item['PREVIEW_PICTURE_SECOND']) ? $item['PREVIEW_PICTURE_SECOND']['SRC'] : $item['PREVIEW_PICTURE']['SRC'];
