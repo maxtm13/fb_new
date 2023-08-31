@@ -117,7 +117,8 @@
 	opacity: 0;
 }
 
-.bx-no-touch .product-item-container.hover .product-item-image-original { opacity: 0; }
+.bx-no-touch .product-item-container.hover .product-item-image-original {
+	opacity: 0; }
 
 .bx-no-touch .product-item-container.hover .product-item-image-alternative { opacity: 1; }
 

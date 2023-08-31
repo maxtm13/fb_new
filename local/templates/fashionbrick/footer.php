@@ -7,7 +7,7 @@
 
     <div class="container">
         <div class="footer__items row">
-            <div class="footer__item col-xl-5">
+            <div class="footer__item col-xl-5 col-lg-4">
                 <div class="footer__item-title logo">
                     <? $APPLICATION->IncludeComponent(
                         "bitrix:main.include",
@@ -48,7 +48,7 @@
 
                 </div>
             </div>
-            <div class="footer__item col-xl-4">
+            <div class="footer__item col-xl-4 col-lg-4">
                 <div class="footer__item-title">Каталог</div>
                 <div class="footer__item-content">
                     <? $APPLICATION->IncludeComponent(
@@ -89,7 +89,7 @@
                     ); ?> </section>
                 </div>
             </div>
-            <div class="footer__item col-xl-3">
+            <div class="footer__item col-xl-3 col-lg-4">
                 <div class="footer__item-title">Информация</div>
                 <div class="footer__item-content">
                     <? $APPLICATION->IncludeComponent(

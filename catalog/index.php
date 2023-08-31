@@ -34,7 +34,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 			0 => "ADD",
 		),
 		"DETAIL_BACKGROUND_IMAGE" => "-",
-		"DETAIL_BRAND_USE" => "N",
+		"DETAIL_BRAND_USE" => "Y",
 		"DETAIL_BROWSER_TITLE" => "-",
 		"DETAIL_CHECK_SECTION_ID_VARIABLE" => "N",
 		"DETAIL_DETAIL_PICTURE_MODE" => array(
@@ -267,6 +267,11 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 			0 => "ATT_SIZE",
 			1 => "ATT_WEIGTH",
 			2 => "ATT_KOLVO",
+		),
+		"DETAIL_SHOW_BASIS_PRICE" => "Y",
+		"DETAIL_BRAND_PROP_CODE" => array(
+			0 => "",
+			1 => "",
 		),
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
