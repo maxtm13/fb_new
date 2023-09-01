@@ -12,11 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<!--<pre>-->
-<?php
-//print_r($arResult["ITEMS"]);
-//?>
-<!--</pre>-->
+
 <div class="main_slider" style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/img/IMG_0586_1.jpg')">
     <div class="main_slider-wrapper">
         <div class="wrapper_content">
