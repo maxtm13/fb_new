@@ -24,8 +24,8 @@ use \Bitrix\Main\Localization\Loc;
  * @var CatalogSectionComponent $component
  */
 ?>
-333
-<pre>
+
+<pre> CARDs2
     <? print_r($arResult['ITEM']['myrating'])?>
 </pre>
 

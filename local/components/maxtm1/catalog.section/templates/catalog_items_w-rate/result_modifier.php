@@ -9,10 +9,19 @@ $component = $this->getComponent();
 $arParams = $component->applyTemplateModifications();
 foreach ($arResult['ITEMS'] as $k => $item){
     $idsitem[]=$item['ID'];
-    $res = CIBlockElement::GetProperty(4,$item['ID'],Array("sort"=>"asc"), Array('rating'));
+    $res = CIBlockElement::GetProperty(4,$item['ID'],Array("sort"=>"asc"), Array());
     while($ar_props = $res->Fetch()){
+//        echo '====<br>';
+//        foreach ($ar_props as $k=>$val){
+//            print_r('$k='.$k.'   ');
+//            print_r('$val='.$val.'<br>');
+//        }
+//                echo '<br>====';
+
         $znach[$item['ID']][$ar_props['CODE']] =$ar_props['VALUE'];
-        $arResult['ITEMS'][$k]['myrating']= $ar_props['VALUE'];
+        if (($ar_props['CODE']=='vote_count') || ($ar_props['CODE']=='rating'))
+        $arResult['ITEMS'][$k][$ar_props['CODE']]= $ar_props['VALUE'];
+//        $arResult['ITEMS'][$k]['vote_count']= $ar_props['VALUE'];
 
     }
 
@@ -39,15 +48,16 @@ foreach ($arResult['ITEMS'] as $k => $item){
 
 <?//print_r($arResult['ITEMS'][0]);;?>
 <?//print_r($arResult['ITEMS']);;?>
-</pre>
+<!--</pre>-->
 
 <?//выборка ID элементов
 // for($i=0; $i<count($arResult['ITEMS']);$i++)
 //    $arflt[]=($arResult['ITEMS'][$i]['ID']);
 //$GLOBALS['arrFilter'] = array('ID' => $arflt);
-//print_r($arflt);
+//print_r($znach);
+print_r($arResult['ITEMS'][0]);
 //?>
-
+</pre>
 <? //var_dump($arResult['ITEMS'][0])?>
 
 <?php
