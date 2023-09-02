@@ -123,6 +123,7 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	transition: opacity 300ms linear;
+	background-size: auto;
 }
 
 .product-item-image-original { z-index: 11; }
@@ -130,6 +131,7 @@
 .product-item-image-alternative {
 	z-index: 13;
 	opacity: 0;
+	background-size: auto;
 }
 
 .bx-no-touch .product-item-container.hover .product-item-image-original {
