@@ -11,7 +11,7 @@
 
 <?php
 echo'=====';
-print_r($arflt);
+//print_r($arflt);
 echo'=====';
 global $APPLICATION;
 
