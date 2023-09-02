@@ -250,7 +250,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 										<?
 										$APPLICATION->IncludeComponent(
 											'bitrix:catalog.item',
-											'card',
+											'card2',
 											array(
 												'RESULT' => array(
 													'ITEM' => $item,
@@ -279,7 +279,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 										<?
 										$APPLICATION->IncludeComponent(
 											'bitrix:catalog.item',
-											'bootstrap_v4',
+											'card2',
 											array(
 												'RESULT' => array(
 													'ITEM' => $item,

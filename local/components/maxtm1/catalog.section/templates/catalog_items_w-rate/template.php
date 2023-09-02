@@ -26,6 +26,7 @@ use Bitrix\Catalog\ProductTable;
                     print_r($i['ID']);
                     echo ' ';
                     print_r($i['myrating']);
+                    print_r('<br>'.$i['vote_count']);
                         echo ('<br>************<br>');
                 }?>
             </pre>
@@ -229,7 +230,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 									$item = reset($rowItems);
 									$APPLICATION->IncludeComponent(
 										'bitrix:catalog.item',
-										'bootstrap_v4',
+										'card2',
 										array(
 											'RESULT' => array(
 												'ITEM' => $item,
@@ -283,11 +284,11 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 							case 2:
 								foreach ($rowItems as $item)
 								{
-									?>
+									?><div class="col-4">
 										<?
 										$APPLICATION->IncludeComponent(
 											'bitrix:catalog.item',
-											'bootstrap_v4',
+											'card2',
 											array(
 												'RESULT' => array(
 													'ITEM' => $item,
@@ -304,6 +305,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 											array('HIDE_ICONS' => 'Y')
 										);
 										?>
+                                    </div>
 									<?
 								}
 								break;

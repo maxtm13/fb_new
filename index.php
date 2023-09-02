@@ -52,8 +52,8 @@ $APPLICATION->SetTitle("");
                 <h2 class="popular_products-title">Популярные товары</h2>
                 <div class="popular_products-subtitle">Мы предлагаем различные виды кирпича для строительства домов, заборов, колонн, высотных домов</div>
             <? $APPLICATION->IncludeComponent(
-	"bitrix:catalog.section", 
-	"catalog_items", 
+	"maxtm1:catalog.section",
+	"catalog_items_w-rate",
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_PICT_PROP" => "MORE_PHOTO",
@@ -78,7 +78,7 @@ $APPLICATION->SetTitle("");
 		"CUSTOM_FILTER" => "{\"CLASS_ID\":\"CondGroup\",\"DATA\":{\"All\":\"AND\",\"True\":\"True\"},\"CHILDREN\":[]}",
 		"DETAIL_URL" => "/catalog/#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_BOTTOM_PAGER" => "N",
 		"DISPLAY_COMPARE" => "N",
 		"DISPLAY_TOP_PAGER" => "N",
 		"ELEMENT_SORT_FIELD" => "shows",
@@ -94,7 +94,7 @@ $APPLICATION->SetTitle("");
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"LABEL_PROP" => array(
 		),
-		"LAZY_LOAD" => "Y",
+		"LAZY_LOAD" => "N",
 		"LINE_ELEMENT_COUNT" => "3",
 		"LOAD_ON_SCROLL" => "N",
 		"MESSAGE_404" => "",
@@ -108,7 +108,7 @@ $APPLICATION->SetTitle("");
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
 		"OFFERS_FIELD_CODE" => array(
-			0 => "NAME",
+			0 => "SHOW_COUNTER",
 			1 => "",
 		),
 		"OFFERS_SORT_FIELD" => "sort",
@@ -122,7 +122,7 @@ $APPLICATION->SetTitle("");
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Товары",
-		"PAGE_ELEMENT_COUNT" => "4",
+		"PAGE_ELEMENT_COUNT" => "3",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
 			0 => "BASE",
@@ -133,7 +133,7 @@ $APPLICATION->SetTitle("");
 		"PRODUCT_ID_VARIABLE" => "id",
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
-		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'3','BIG_DATA':false}]",
+		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false}]",
 		"PRODUCT_SUBSCRIPTION" => "Y",
 		"RCM_PROD_ID" => $_REQUEST["PRODUCT_ID"],
 		"RCM_TYPE" => "personal",
@@ -153,7 +153,7 @@ $APPLICATION->SetTitle("");
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
-		"SHOW_ALL_WO_SECTION" => "N",
+		"SHOW_ALL_WO_SECTION" => "Y",
 		"SHOW_CLOSE_POPUP" => "N",
 		"SHOW_DISCOUNT_PERCENT" => "N",
 		"SHOW_FROM_SECTION" => "N",
