@@ -14,10 +14,10 @@ foreach($arResult as $arItem):?>
 	<?if ($arItem["IS_PARENT"]):?>
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<li><a href="<?=$arItem["LINK"]?>" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a>
+			<li><span class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></span>
 				<ul>
 		<?else:?>
-			<li<?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><a href="<?=$arItem["LINK"]?>" class="parent"><?=$arItem["TEXT"]?></a>
+			<li<?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><span href="<?=$arItem["LINK"]?>" class="parent"><?=$arItem["TEXT"]?></span>
 				<ul>
 		<?endif?>
 

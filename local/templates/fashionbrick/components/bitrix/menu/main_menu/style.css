@@ -16,19 +16,21 @@
 }
 
 
-#horizontal-multilevel-menu
+#horizontal-multilevel-menu 
 {
-
+	
 }
 
 /*Links*/
-#horizontal-multilevel-menu a
+#horizontal-multilevel-menu a,
+#horizontal-multilevel-menu span
 {
 	display:block;
 	padding:5px 10px;
 	/*padding:0.3em 0.8em;*/
 	text-decoration:none;
 	text-align:center;
+	cursor: pointer;
 }
 
 #horizontal-multilevel-menu li
@@ -38,7 +40,8 @@
 }
 
 /*Root items*/
-#horizontal-multilevel-menu li a.root-item
+#horizontal-multilevel-menu li a.root-item,
+#horizontal-multilevel-menu li span.root-item
 {
 	color: inherit;
 	font-weight:400;
@@ -48,7 +51,8 @@
 }
 
 /*Root menu selected*/
-#horizontal-multilevel-menu li a.root-item-selected
+#horizontal-multilevel-menu li a.root-item-selected,
+#horizontal-multilevel-menu li span.root-item-selected
 {
 	/*background:#fc8d3d;*/
 	color:var(--c2);
@@ -58,7 +62,10 @@
 }
 
 /*Root items: hover*/
-#horizontal-multilevel-menu li:hover a.root-item, #horizontal-multilevel-menu li.jshover a.root-item
+#horizontal-multilevel-menu li:hover a.root-item,
+#horizontal-multilevel-menu li:hover span.root-item,
+#horizontal-multilevel-menu li.jshover a.root-item,
+#horizontal-multilevel-menu li.jshover span.root-item
 {
 	/*background: var(--c5);*/
 	transform: translateY(-3px);
@@ -67,19 +74,22 @@
 }
 
 /*Item-parents*/
-#horizontal-multilevel-menu a.parent
+#horizontal-multilevel-menu a.parent,
+#horizontal-multilevel-menu span.parent
 {
 	background: url(images/arrow.gif) center right no-repeat;
 }
 
 /*Denied items*/
-#horizontal-multilevel-menu a.denied
+#horizontal-multilevel-menu a.denied,
+#horizontal-multilevel-menu span.denied,
 {
 	background: url(images/lock.gif) center right no-repeat;
 }
 
 /*Child-items: hover*/
-#horizontal-multilevel-menu li:hover, #horizontal-multilevel-menu li.jshover
+#horizontal-multilevel-menu li:hover,
+#horizontal-multilevel-menu li.jshover
 {
 	/*background:#D6D6D6;*/
 	color:var(--c2);
@@ -122,7 +132,8 @@
 }
 
 /*Item link*/
-#horizontal-multilevel-menu li ul a
+#horizontal-multilevel-menu li ul a,
+#horizontal-multilevel-menu li ul span
 {
 	text-align:left;
 	transition: color 0.3ms;
@@ -139,7 +150,18 @@
 #horizontal-multilevel-menu li:hover li:hover li:hover li:hover li a,
 #horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li a,
 #horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover li a,
-#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover li a
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover li a,
+#horizontal-multilevel-menu li span,
+#horizontal-multilevel-menu li:hover li span,
+#horizontal-multilevel-menu li.jshover li span,
+#horizontal-multilevel-menu li:hover li:hover li span,
+#horizontal-multilevel-menu li.jshover li.jshover li span,
+#horizontal-multilevel-menu li:hover li:hover li:hover li span,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li span,
+#horizontal-multilevel-menu li:hover li:hover li:hover li:hover li span,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li span,
+#horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover li span,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover li span
 {
 	color:var(--c1);
 	font-weight:400;
@@ -156,7 +178,17 @@
 #horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover a,
 #horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover a
 #horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover li:hover a,
-#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover li.jshover a
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover li.jshover a,
+#horizontal-multilevel-menu li:hover li:hover span,
+#horizontal-multilevel-menu li.jshover li.jshover span,
+#horizontal-multilevel-menu li:hover li:hover li:hover span,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover span,
+#horizontal-multilevel-menu li:hover li:hover li:hover li:hover span,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover span,
+#horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover span,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover span,
+#horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover li:hover span,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover li.jshover span
 {
 	color:var(--c2);
 }
