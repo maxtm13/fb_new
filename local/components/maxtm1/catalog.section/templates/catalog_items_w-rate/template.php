@@ -666,9 +666,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 					array('HIDE_ICONS' => 'Y')
 				);
 			}
-			?> <pre style="text-align: left">template.php
-                <?//print_r($arResult['NAV_RESULT']);?>
-            </pre>
+			?>
 			<!-- items-container -->
 		</div>
 		<?

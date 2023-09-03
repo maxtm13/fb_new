@@ -10,9 +10,7 @@
 ?>
 
 <?php
-echo'=====';
-//print_r($arflt);
-echo'=====';
+
 global $APPLICATION;
 
 if (!empty($templateData['TEMPLATE_LIBRARY']))

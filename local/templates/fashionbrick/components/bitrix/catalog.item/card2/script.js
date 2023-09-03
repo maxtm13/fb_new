@@ -761,7 +761,7 @@
 		{
 			clearTimeout(this.hoverTimer);
 			this.obProduct.style.height = getComputedStyle(this.obProduct).height;
-			BX.addClass(this.obProduct, 'hover');
+			BX.addClass(this.obProduct, 'hover1');
 
 			BX.PreventDefault(event);
 		},
@@ -771,7 +771,7 @@
 			if (this.hoverStateChangeForbidden)
 				return;
 
-			BX.removeClass(this.obProduct, 'hover');
+			BX.removeClass(this.obProduct, 'hover1');
 			this.hoverTimer = setTimeout(
 				BX.delegate(function(){
 					this.obProduct.style.height = 'auto';
