@@ -276,7 +276,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 							case 2:
 								foreach ($rowItems as $item)
 								{
-									?><div class="col-4">
+									?><div class="col-4 product-card">
 										<?
 										$APPLICATION->IncludeComponent(
 											'bitrix:catalog.item',

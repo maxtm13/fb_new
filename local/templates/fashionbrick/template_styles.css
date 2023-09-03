@@ -674,6 +674,10 @@ div.news-list img.preview_picture {
   .footer__items .footer__item-title {
     font-size: 24px;
   }
+  .row.product-item-list-col-3 {
+    row-gap: 30px;
+    justify-content: center;
+  }
 }
 @media (max-width: 1000px) {
   .top_menu-wrapper {

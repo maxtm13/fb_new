@@ -16,9 +16,13 @@
 }
 
 
-#horizontal-multilevel-menu 
-{
-	
+#horizontal-multilevel-menu {
+
+}
+
+#horizontal-multilevel-menu>span{
+	cursor: pointer;
+
 }
 
 /*Links*/
