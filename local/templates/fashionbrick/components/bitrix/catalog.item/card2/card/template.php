@@ -311,7 +311,7 @@ use \Bitrix\Main\Localization\Loc;
                         if (!$haveOffers) {
                             if ($actualItem['CAN_BUY']) {
                                 ?>
-                                <div class="product-item-button-container" id="<?= $itemIds['BASKET_ACTIONS'] ?>">
+                                <div class="product-item-button-container dp-none" id="<?= $itemIds['BASKET_ACTIONS'] ?>">
                                     <button class="btn btn-primary <?= $buttonSizeClass ?>"
                                             id="<?= $itemIds['BUY_LINK'] ?>"
                                             href="javascript:void(0)" rel="nofollow">
@@ -321,7 +321,7 @@ use \Bitrix\Main\Localization\Loc;
                                 <?
                             } else {
                                 ?>
-                                <div class="product-item-button-container">
+                                <div class="product-item-button-container dp-none">
                                     <?
                                     if ($showSubscribe) {
                                         $APPLICATION->IncludeComponent(
@@ -350,7 +350,7 @@ use \Bitrix\Main\Localization\Loc;
                         } else {
                             if ($arParams['PRODUCT_DISPLAY_MODE'] === 'Y') {
                                 ?>
-                                <div class="product-item-button-container">
+                                <div class="product-item-button-container dp-none">
                                     <?
                                     if ($showSubscribe) {
                                         $APPLICATION->IncludeComponent(
@@ -385,7 +385,7 @@ use \Bitrix\Main\Localization\Loc;
                                 <?
                             } else {
                                 ?>
-                                <div class="product-item-button-container">
+                                <div class="product-item-button-container dp-none">
                                     <a class="btn btn-primary <?= $buttonSizeClass ?>"
                                        href="<?= $item['DETAIL_PAGE_URL'] ?>">
                                         <?= $arParams['MESS_BTN_DETAIL'] ?>

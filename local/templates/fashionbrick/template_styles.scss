@@ -157,55 +157,97 @@ body {
     display: inline-block;
   }
   .burger-menu{
+    position: relative;
     width: 30px;
     height: 30px;
-    //display: inline-block;
-    display: flex;
-    &.active .burger-menu-icon{
-      height: 0;
-    }
-    &.active .burger-menu-icon:after{
-      transform: rotate(765deg);
-    }
-    &.active .burger-menu-icon:before{
-      transform: rotate(-45deg);
-      //transform-origin: left center;
-    }
-
-    .burger-menu-icon,
-    .burger-menu-icon::after,
-    .burger-menu-icon::before{
-      height: 2px;
-      width: 100%;
-      background-color: var(--c2);
-      position: relative;
-      right: 0;
-      margin: auto 0;
-      border-radius: 5px;
-      transition: 0.3s;
-
-    }
-    .burger-menu-icon::after{
-      content: '';
-      top:50%;
-      margin-top: -1px;
-      transform: translateY(-10px);
-      position: absolute;
-
-
-    }
-    .burger-menu-icon::before{
-      content: '';
-      top:50%;
-      transform: translateY(10px);
-      position: absolute;
-      margin-top: -1px;
-
-    }
-    .burger-menu.active .burger-menu-icon{
-
-    }
   }
+  .burger-menu-icon{
+    //display: none;
+  }
+  .burger-menu-icon,
+  .burger-menu-icon::before,
+  .burger-menu-icon::after{
+    top:50%;
+    width: 30px;
+    height: 2px;
+    background-color: var(--c2);
+    position: absolute;
+    transition: all 0.3s;
+  }
+  .burger-menu-icon::before,
+  .burger-menu-icon::after{
+    content: '';
+  }
+  .burger-menu-icon::before{
+    transform: translateY(-10px);
+  }
+  .burger-menu-icon::after{
+    transform: translateY(8px);
+  }
+  .burger-menu.active .burger-menu-icon{
+    //transform: scaleX(0);
+    background-color: transparent;
+  }
+  .burger-menu.active .burger-menu-icon::before{
+    transform: rotate(45deg);
+  }
+  .burger-menu.active .burger-menu-icon::after{
+    transform: rotate(315deg);
+  }
+
+  //.burger-menu{
+  //  width: 30px;
+  //  height: 30px;
+  //  //display: inline-block;
+  //  display: flex;
+  //  &.active .burger-menu-icon{
+  //    transform: scaleX(0);;
+  //
+  //  }
+  //  &.active .burger-menu-icon:after{
+  //    transform: rotate(45deg) scaleX(1);
+  //  }
+  //  &.active .burger-menu-icon:before{
+  //    transform: rotate(-45deg) scaleX(1);
+  //    //transform-origin: left center;
+  //  }
+  //
+  //  .burger-menu-icon,
+  //  .burger-menu-icon::after,
+  //  .burger-menu-icon::before{
+  //    height: 2px;
+  //    width: 100%;
+  //    background-color: var(--c2);
+  //    position: relative;
+  //    //right: 0;
+  //    margin: auto 0;
+  //    border-radius: 5px;
+  //    transition: 0.3s;
+  //
+  //  }
+  //  .burger-menu-icon::after{
+  //    content: '';
+  //    top:50%;
+  //    //margin-top: -1px;
+  //    transform: translateY(-12px);
+  //    position: absolute;
+  //    width: 30px;
+  //
+  //
+  //  }
+  //  .burger-menu-icon::before{
+  //    content: '';
+  //    top:50%;
+  //    transform: translateY(10px) scaleX(1);
+  //    position: absolute;
+  //    //margin-top: -1px;
+  //    width: 30px;
+  //
+  //  }
+  //  .burger-menu.active .burger-menu-icon{
+  //    //transform-origin: center center;
+  //  }
+  //}
 }
 
 .mobile-menu-wrapper{

@@ -108,7 +108,8 @@
 	position: relative;
 	display: block;
 	margin-bottom: 15px;
-	padding-top: 116%;
+	//padding-top: 116%;
+	padding-top: 75%;
 	width: 100%;
 	transition: all 300ms ease;
 }
@@ -128,10 +129,9 @@
 	width: 100%;
 	height: 100%;
 	background-position: center;
-	background-size: contain;
+	background-size: 250px 250px;
 	background-repeat: no-repeat;
 	transition: opacity 300ms linear;
-	background-size: auto;
 }
 .product-item-image-original::before{
 	content:'';
