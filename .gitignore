@@ -4,3 +4,4 @@
 /bitrix_core.zip
 /**/*.min.min.*
 /*.min.min.*
+/upload
