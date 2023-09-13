@@ -54,3 +54,5 @@ if ($arParams['DISPLAY_COMPARE'])
 		<?
 	}
 }
+
+

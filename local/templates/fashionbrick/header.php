@@ -1,6 +1,12 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $CurDir = $APPLICATION->GetCurDir();
 $CurUri = $APPLICATION->GetCurUri();
+function pre($arr){
+    echo'maxtm1';
+    echo'<pre style="text-align: left; color: #777">';
+    print_r($arr);
+    echo'</pre>';
+}
 ?>
 <!doctype html>
 <html xml:lang="<?= LANGUAGE_ID ?>" lang="<?= LANGUAGE_ID ?>">

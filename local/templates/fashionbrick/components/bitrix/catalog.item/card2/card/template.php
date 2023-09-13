@@ -29,6 +29,7 @@ use \Bitrix\Main\Localization\Loc;
 
 
 <div class="product-item">
+
     <? if ($itemHasDetailUrl): ?>
     <a class="product-item-image-wrapper" href="<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $imgTitle ?>"
        data-entity="image-wrapper">
@@ -153,13 +154,20 @@ use \Bitrix\Main\Localization\Loc;
     </div>
     <h3 class="product-item-title">
         <? if ($itemHasDetailUrl): ?>
-        <a href="<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $productTitle ?>">
+        <a href="<?= $item['DETAIL_PAGE_URL'] ?>" title="<?=$arResult['ITEM']['SECTION_DESCRIPTION'];?>">
             <? endif; ?>
-            <?= $productTitle ?>
+            <?=$arResult['ITEM']['SECTION_DESCRIPTION'] ?>
+
             <? if ($itemHasDetailUrl): ?>
         </a>
     <? endif; ?>
     </h3>
+    <h4 class="product-item-facture">
+        ФАКТУРА:<?=$productTitle?>
+    </h4>
+    <h5 class="product-item-name">
+        <?=$arResult['ITEM']['SECTION_NAME']?>
+    </h5>
    
     <?
     if (!empty($arParams['PRODUCT_BLOCKS_ORDER'])) {

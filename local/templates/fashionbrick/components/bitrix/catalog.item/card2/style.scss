@@ -34,6 +34,9 @@
 		color: #888888;
 		font-weight: 300;
 	}
+	.product-item-name{
+		padding-bottom: 15px;
+	}
 }
 
 .product-item-big-card .product-item,
@@ -504,8 +507,8 @@
 /*Title*/
 .product-item-title {
 	overflow: hidden;
-	margin-top: 30px;
-	padding-bottom: 30px;
+	margin-top: 20px;
+	padding-bottom: 10px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	font-weight: normal;

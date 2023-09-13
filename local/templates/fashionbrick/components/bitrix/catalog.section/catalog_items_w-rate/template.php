@@ -206,6 +206,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 					];
 				}
 
+
 				foreach ($arResult['ITEM_ROWS'] as $rowData)
 				{
 					$rowItems = array_splice($arResult['ITEMS'], 0, $rowData['COUNT']);
