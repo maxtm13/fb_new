@@ -1,0 +1,244 @@
+/**Top menu**/
+#mobile-menu,#mobile-menu ul
+{
+	font-family: "Roboto";
+	font-weight: 400;
+	margin:0;
+	padding:0;
+	/*background:#BC262C url(images/header_menu_bg.gif) repeat-x;*/
+	/*min-height:27px;*/
+	/*width:100%;*/
+	list-style:none;
+	font-size:16px;
+	float:left;
+	/*color: #b63737;*/
+	/*font-size:90%*/
+}
+
+
+#mobile-menu {
+
+}
+
+#mobile-menu>span{
+	cursor: pointer;
+
+}
+
+/*Links*/
+#mobile-menu a,
+#mobile-menu span
+{
+	display:block;
+	padding:5px 10px;
+	/*padding:0.3em 0.8em;*/
+	text-decoration:none;
+	text-align:left;
+	cursor: pointer;
+}
+
+#mobile-menu li
+{
+	float:left;
+
+}
+
+/*Root items*/
+#mobile-menu li a.root-item,
+#mobile-menu li span.root-item
+{
+	color: inherit;
+	font-weight:400;
+	padding:7px 12px;
+	border-bottom: 2px solid rgba(var(--c5),0);
+	transition: all 0.3s ease-in-out;
+}
+
+/*Root menu selected*/
+#mobile-menu li a.root-item-selected,
+#mobile-menu li span.root-item-selected,
+#mobile-menu li.jshover li.item-selected a{
+	/*background:#fc8d3d;*/
+	color:var(--c5);
+	/*border-bottom: 2px solid rgba(var(--c5),1);*/
+	font-weight:bold;
+	padding:7px 12px;
+}
+
+/*Root items: hover*/
+#mobile-menu li.jshover a.root-item,
+#mobile-menu li.jshover span.root-item
+{
+	/*background: var(--c5);*/
+	transform: translateY(-3px);
+	/*border-bottom: 2px solid var(--c5);*/
+	color:var(--c2);
+}
+
+/*Item-parents*/
+#mobile-menu a.parent,
+#mobile-menu span.parent
+{
+	background: url(images/arrow.gif) center right no-repeat;
+}
+
+/*Denied items*/
+#mobile-menu a.denied,
+#mobile-menu span.denied
+{
+	background: url(images/lock.gif) center right no-repeat;
+}
+
+/*Child-items: hover*/
+#mobile-menu li.jshover
+{
+	/*background:#D6D6D6;*/
+	color:var(--c2);
+}
+
+/*Child-items selected*/
+#mobile-menu li.item-selected
+{
+	/*background:#D6D6D6;*/
+	color:var(--c2);
+
+}
+
+/*Sub-menu box*/
+#mobile-menu li ul
+{
+	/*position:absolute;*/
+	/*top:-999em;*/
+	top:auto;
+	display:none;
+	/*opacity: 0;*/
+	transition: opacity 0.5s;
+	z-index:500;
+
+	height:auto;
+	/*width:12em;*/
+	width:200px;
+
+	/*background: rgba(212, 205, 55, 0.60);*/
+	/*backdrop-filter: blur(49px);*/
+	/*background:#F5F5F5;*/
+	/*border:1px solid #C1C1C1;*/
+	color: var(--c2);
+}
+
+/*Sub-menu item box*/
+#mobile-menu li li
+{
+	width:100%;
+	/*border-bottom:1px solid var(--c2);*/
+	padding-left: 10px;
+	font-size: 0.9em;
+}
+
+/*Item link*/
+#mobile-menu li ul a,
+#mobile-menu li ul span
+{
+	text-align:left;
+	transition: color 0.3ms;
+}
+
+/*Items text color & size */
+#mobile-menu li a,
+#mobile-menu li.jshover li a,
+#mobile-menu li.jshover li.jshover li a,
+#mobile-menu li.jshover li.jshover li.jshover li a,
+#mobile-menu li.jshover li.jshover li.jshover li.jshover li a,
+#mobile-menu li.jshover li.jshover li.jshover li.jshover li.jshover li a,
+#mobile-menu li span,
+#mobile-menu li.jshover li span,
+#mobile-menu li.jshover li.jshover li span,
+#mobile-menu li.jshover li.jshover li.jshover li span,
+#mobile-menu li.jshover li.jshover li.jshover li.jshover li span,
+#mobile-menu li.jshover li.jshover li.jshover li.jshover li.jshover li span
+{
+	color:var(--c2);
+	font-weight:400;
+	transition: color 0.3s;
+}
+
+/*Items text color & size: hover*/
+#mobile-menu li.jshover li.jshover a,
+#mobile-menu li.jshover li.jshover li.jshover a,
+#mobile-menu li.jshover li.jshover li.jshover li.jshover a,
+#mobile-menu li.jshover li.jshover li.jshover li.jshover li.jshover a,
+#mobile-menu li.jshover li.jshover li.jshover li.jshover li.jshover li.jshover a,
+#mobile-menu li.jshover li.jshover span,
+#mobile-menu li.jshover li.jshover li.jshover span,
+#mobile-menu li.jshover li.jshover li.jshover li.jshover span,
+#mobile-menu li.jshover li.jshover li.jshover li.jshover li.jshover span,
+#mobile-menu li.jshover li.jshover li.jshover li.jshover li.jshover li.jshover span
+{
+	color:var(--c2);
+}
+
+#mobile-menu li ul ul
+{
+	margin:-27px 0 0 199px;
+	/*margin:-1.93em 0 0 11.6em;*/
+}
+
+#mobile-menu li.jshover ul ul,
+#mobile-menu li.jshover ul ul ul,
+#mobile-menu li.jshover ul ul ul ul,
+#mobile-menu li.jshover ul ul ul ul ul
+{
+	/*top:-999em;*/
+	/*display:none;*/
+	/*opacity: 0;*/
+	transition: opacity 0.5s;
+}
+
+#mobile-menu li.jshover ul,
+#mobile-menu li li.jshover ul,
+#mobile-menu li li li.jshover ul,
+#mobile-menu li li li li.jshover ul,
+#mobile-menu li li li li li.jshover ul
+{
+	/*z-index:1000;
+	top:auto;*/
+	display:block;
+	/*opacity: 1;*/
+}
+
+div.menu-clear-left
+{
+	clear:left;
+}
+
+
+
+
+/*========================*/
+/*ul {*/
+/*	font-family: "Roboto";*/
+/*	font-weight: 300;*/
+/*	color: var(--c2);*/
+/*	display: flex;*/
+/*	justify-content: space-between;*/
+/*	a{*/
+/*		text-decoration: none;*/
+/*		font-family: "Roboto";*/
+/*		font-weight: 300;*/
+/*		color: var(--c2);*/
+/*	}*/
+/*li{*/
+/*ul{*/
+/*		display: none;*/
+/*}*/
+/*}*/
+/*}*/
+/*			li{*/
+/*				display: none;*/
+/*			}*/
+/*li{*/
+/* list-style: none;*/
+/*}*/
+/*li:hover{*/
+
+/*}*/

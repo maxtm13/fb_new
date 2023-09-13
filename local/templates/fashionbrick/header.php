@@ -224,6 +224,7 @@ $CurUri = $APPLICATION->GetCurUri();
                     </a>
                 </div>
                 <div class="burger-menu">
+
                     <div class="burger-menu-icon"></div>
                 </div>
             </div>
@@ -233,28 +234,25 @@ $CurUri = $APPLICATION->GetCurUri();
 
 
 </nav>
-<nav class="mobile-menu-wrapper dp-none">
+<nav class="mobile-menu-wrapper">
     <div class="container">
         <div class="menu__mobile">
             <? // Меню - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/menu.php
-            $APPLICATION->IncludeComponent(
-                "bitrix:menu",
-                "main_menu",
-                array(
-                    "ROOT_MENU_TYPE" => "main",
-                    "MENU_CACHE_TYPE" => "N",
-                    "MENU_CACHE_TIME" => "3600",
-                    "MENU_CACHE_USE_GROUPS" => "Y",
-                    "MENU_CACHE_GET_VARS" => array(),
-                    "MAX_LEVEL" => "3",
-                    "CHILD_MENU_TYPE" => "section",
-                    "USE_EXT" => "N",
-                    "DELAY" => "N",
-                    "ALLOW_MULTI_SELECT" => "N",
-                    "COMPONENT_TEMPLATE" => "main_menu"
-                ),
-                false
-            ); ?>
+            $APPLICATION->IncludeComponent("bitrix:menu", "main_menu-mobile", Array(
+	"ROOT_MENU_TYPE" => "main",	// Тип меню для первого уровня
+		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
+		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+		"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
+		"MAX_LEVEL" => "3",	// Уровень вложенности меню
+		"CHILD_MENU_TYPE" => "section",	// Тип меню для остальных уровней
+		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+		"DELAY" => "N",	// Откладывать выполнение шаблона меню
+		"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+		"COMPONENT_TEMPLATE" => "main_menu"
+	),
+	false
+); ?>
         </div>
         <div class="personal_inner">
             <div class="user_profile">

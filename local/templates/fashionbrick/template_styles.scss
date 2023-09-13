@@ -209,9 +209,27 @@ body {
 }
 
 .mobile-menu-wrapper{
+  position: absolute;
+  left:-100%;
   margin-top: 87px;
   background-color: var(--c1);
   min-height: 50vh;
+  width: 100%;
+  z-index: 12;
+  transition: all 0.3s;
+  //display: none;
+  .menu__mobile {
+    #mobile-menu{
+      display: flex;
+      flex-direction: column;
+      color: var(--c2);
+    }
+  }
+}
+.mobile-menu-wrapper.active{
+  //display: block;
+  left:0;
+
 }
 .margin_top {
   margin-top: 92px;

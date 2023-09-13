@@ -82,7 +82,9 @@ $(document).ready(function () {
     });
     let burger=document.querySelector('.burger-menu')
     burger.addEventListener("click", function (){
-        document.querySelector('.logo').classList.toggle('active')
+        console.log('click')
+        document.querySelector('.mobile-menu-wrapper').classList.toggle('active')
+        console.log('mobile-menu-wrapper active')
         burger.classList.toggle('active')
     })
 });
