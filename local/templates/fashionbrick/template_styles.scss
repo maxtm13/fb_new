@@ -787,15 +787,17 @@ div.news-list img.preview_picture {
   //flex-wrap: wrap;
   //gap: 20px;
   //justify-content: space-between;
-  display: grid;
-  grid-template-columns: repeat(3, 358px);
-  justify-content: space-between;
-  gap: 20px;
+  
+  //Применение bootstrap
+  // display: grid;
+  // grid-template-columns: repeat(3, 358px);
+  // justify-content: space-between;
+  // gap: 20px;
 
 }
 .galery-foto-item{
 
-
+  margin: 15px 0;
 
   //width: 358px;
   height: 358px;
@@ -944,5 +946,3 @@ div.news-list img.preview_picture {
     align-items: center;
   }
 }
-
-

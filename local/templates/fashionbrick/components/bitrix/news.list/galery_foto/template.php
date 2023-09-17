@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="galery-items">
+<div class="galery-items row">
     <? if ($arParams["DISPLAY_TOP_PAGER"]): ?>
         <?= $arResult["NAV_STRING"] ?><br/>
     <? endif; ?>
@@ -23,14 +23,12 @@ $this->setFrameMode(true);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
 
-        <div class="galery-foto-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+        <div class="galery-foto-item col-xl-4 col-md-6 col-sm-12" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
             <a href="<?= $arItem['DETAIL_PICTURE']['SRC'] ?>" data-fancybox="gallery" class="link_img_detail">
                 <img
                         class="preview_picture"
                         border="0"
                         src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>"
-                        width="<?= $arItem["PREVIEW_PICTURE"]["WIDTH"] ?>"
-                        height="<?= $arItem["PREVIEW_PICTURE"]["HEIGHT"] ?>"
                         alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>"
                         title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>"
                         style="float:left"

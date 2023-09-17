@@ -240,11 +240,7 @@
 }
 
 .product-item-amount-field-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   position: relative;
   max-width: 150px;
@@ -326,8 +322,6 @@
 }
 
 .product-item-amount-field-block {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
 }
 
@@ -363,7 +357,6 @@
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
-  -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
 }
@@ -654,39 +647,6 @@
   max-height: 100vh;
   width: calc(100% - 150px);
   transform: translateY(-50%) translateX(-50%);
-}
-
-@-webkit-keyframes imgPopupShow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes imgPopupShow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-ms-keyframes imgPopupShow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes imgPopupShow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 @keyframes imgPopupShow {
   from {
@@ -1089,12 +1049,8 @@
 .product-item-detail-short-card-fixed .product-item-detail-short-card-content-container {
   margin: 0 auto;
   max-width: 1048px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -1115,8 +1071,6 @@
 
 .product-item-detail-short-title-container {
   max-width: 650px;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
 }
 
@@ -1172,16 +1126,13 @@
 
 .product-item-detail-properties-dots {
   border-bottom: 1px dotted #a5a5a5;
-  -ms-flex-preferred-size: 0;
   flex-basis: 0;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%;
 }
 
 .product-item-detail-properties-name,
 .product-item-detail-properties-value {
-  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   max-width: 50%;
   width: auto;
@@ -1204,7 +1155,6 @@
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -1215,6 +1165,4 @@ input[type=number] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
