@@ -113,8 +113,7 @@ body h2 {
   width: 100%;
   color: var(--c1);
   background: rgba(212, 205, 55, 0.6);
-  -webkit-backdrop-filter: blur(48.5px);
-          backdrop-filter: blur(48.5px);
+  backdrop-filter: blur(48.5px);
   position: absolute;
   z-index: 100;
 }
@@ -205,16 +204,14 @@ body h2 {
   display: flex;
   align-items: center;
   color: var(--c2);
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 
 .user_profile-lnk {
   display: flex;
   align-items: center;
   font-size: 16px;
-  -moz-column-gap: 3px;
-       column-gap: 3px;
+  column-gap: 3px;
 }
 
 .cart {
@@ -229,8 +226,7 @@ body h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 3px;
-       column-gap: 3px;
+  column-gap: 3px;
   font-size: 16px;
 }
 
@@ -293,8 +289,7 @@ body h2 {
   height: 100%;
   left: 0;
   background: rgba(217, 217, 217, 0.6);
-  -webkit-backdrop-filter: blur(17px);
-          backdrop-filter: blur(17px);
+  backdrop-filter: blur(17px);
   position: relative;
 }
 .slider-wrapper .wrapper_content {
@@ -331,8 +326,7 @@ body h2 {
   justify-content: flex-start;
 }
 .slider-wrapper .wrapper_content .wrapper_content-feachers .feacher-item .feacher-item-img img {
-  -o-object-fit: none;
-     object-fit: none;
+  object-fit: none;
   width: 70px;
   height: 70px;
   margin-bottom: 30px;
@@ -578,8 +572,7 @@ div.news-list img.preview_picture {
 .subSection .subSection__inner .subSection__title {
   display: flex;
   flex-wrap: nowrap;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 .subSection .subSection__inner .subSection__title h2 {
   font-size: 24px;
@@ -622,8 +615,7 @@ div.news-list img.preview_picture {
 
 .ATT_adress {
   display: flex;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 
 .ATT_Phone a + a {
@@ -652,8 +644,7 @@ div.news-list img.preview_picture {
 }
 .galery-foto-item .preview_picture {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   filter: brightness(1);
   transition: filter 0.3s ease-in-out;
 }
@@ -764,8 +755,7 @@ div.news-list img.preview_picture {
   .slider-wrapper .wrapper_content .wrapper_content-feachers .feacher-item .feacher-item-img img {
     width: 50px;
     height: 50px;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     margin-bottom: 5px;
   }
   .feacher-item-text {
@@ -783,4 +773,6 @@ div.news-list img.preview_picture {
     row-gap: 10px;
     align-items: center;
   }
-}/*# sourceMappingURL=template_styles.css.map */
+}
+
+/*# sourceMappingURL=template_styles.css.map */

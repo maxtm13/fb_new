@@ -408,4 +408,4 @@ if (($CurDir === '/') && (!str_contains($CurUri, '/test'))) { ?>
     <h1 class="main-sections-title"><? $APPLICATION->ShowTitle(false); ?></h1>
     <? } ?>
 
-
+</div>
